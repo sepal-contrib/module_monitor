@@ -1,5 +1,5 @@
 +-----------------------------+------------------------------------------------------------------------------------------------------+
-| Header 1                    | Header 2                                                                                             |
+| Module name                 | Status                                                                                               |
 +=============================+======================================================================================================+
 | sepal_pysmm                 | .. image:: https://github.com/sepal-contrib/sepal_pysmm/actions/workflows/unit.yaml/badge.svg        |
 |                             |    :target: https://github.com/sepal-contrib/sepal_pysmm/actions/workflows/unit.yaml                 |
