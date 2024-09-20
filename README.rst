@@ -1,6 +1,10 @@
 +-----------------------------+------------------------------------------------------------------------------------------------------+
 | Module name                 | Status                                                                                               |
 +=============================+======================================================================================================+
+| sepal_ui                    | .. image:: https://github.com/openforis/sepal_ui/actions/workflows/unit.yml/badge.svg               |
+|                             |    :target: https://github.com/openforis/sepal_ui/actions/workflows/unit.yml                        |
+|                             |    :alt: build                                                                                       |
++-----------------------------+------------------------------------------------------------------------------------------------------+
 | sepal_pysmm                 | .. image:: https://github.com/sepal-contrib/sepal_pysmm/actions/workflows/unit.yaml/badge.svg        |
 |                             |    :target: https://github.com/sepal-contrib/sepal_pysmm/actions/workflows/unit.yaml                 |
 |                             |    :alt: build                                                                                       |
