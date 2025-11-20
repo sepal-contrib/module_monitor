@@ -65,7 +65,7 @@
 |                             |    :target: https://github.com/sepal-contrib/gee_source/actions/workflows/unit.yaml                  |           |        |
 |                             |    :alt: build                                                                                       |           |        |
 +-----------------------------+------------------------------------------------------------------------------------------------------+-----------+--------+
-| `planet_active_fires_explorer`_| .. image:: https://github.com/sepal-contrib/planet_active_fires_explorer/actions/workflows/unit.yaml | yes       |        |
+| `active_fires_explorer`_    | .. image:: https://github.com/sepal-contrib/planet_active_fires_explorer/actions/workflows/unit.yaml | yes       |        |
 |                             |    :target: https://github.com/sepal-contrib/planet_active_fires_explorer/actions/workflows/unit.yaml|           |        |
 |                             |    :alt: build                                                                                       |           |        |
 +-----------------------------+------------------------------------------------------------------------------------------------------+-----------+--------+
@@ -73,10 +73,10 @@
 |                             |    :target: https://github.com/sepal-contrib/sepal_smfm_biota/actions/workflows/unit.yaml            |           |        |
 |                             |    :alt: build                                                                                       |           |        |
 +-----------------------------+------------------------------------------------------------------------------------------------------+-----------+--------+
-| `gwb`_                      | .. image:: https://github.com/sepal-contrib/gwb/actions/workflows/unit.yaml/badge.svg                |           |
-|                             |    :target: https://github.com/sepal-contrib/gwb/actions/workflows/unit.yaml                         |           |
-|                             |    :alt: build                                                                                       |           |
-+-----------------------------+------------------------------------------------------------------------------------------------------+-----------+
+| `gwb`_                      | .. image:: https://github.com/sepal-contrib/gwb/actions/workflows/unit.yaml/badge.svg                |           |        |
+|                             |    :target: https://github.com/sepal-contrib/gwb/actions/workflows/unit.yaml                         |           |        |
+|                             |    :alt: build                                                                                       |           |        |
++-----------------------------+------------------------------------------------------------------------------------------------------+-----------+--------+
 | `damage_proxy_maps`_        | .. image:: https://github.com/sepal-contrib/damage_proxy_maps/actions/workflows/unit.yaml/badge.svg  | yes       |        |
 |                             |    :target: https://github.com/sepal-contrib/damage_proxy_maps/actions/workflows/unit.yaml           |           |        |
 |                             |    :alt: build                                                                                       |           |        |
