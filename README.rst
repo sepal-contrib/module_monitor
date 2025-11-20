@@ -116,7 +116,7 @@
 .. _fcdm: https://github.com/sepal-contrib/fcdm
 .. _basin-rivers: https://github.com/sepal-contrib/basin-rivers
 .. _gee_source: https://github.com/sepal-contrib/gee_source
-.. _planet_active_fires_explorer: https://github.com/sepal-contrib/planet_active_fires_explorer
+.. _active_fires_explorer: https://github.com/sepal-contrib/planet_active_fires_explorer
 .. _sepal_smfm_biota: https://github.com/sepal-contrib/sepal_smfm_biota
 .. _gwb: https://github.com/sepal-contrib/gwb
 .. _damage_proxy_maps: https://github.com/sepal-contrib/damage_proxy_maps
