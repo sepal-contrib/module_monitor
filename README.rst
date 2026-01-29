@@ -21,98 +21,98 @@
 |                             |                                                                                                      |           |        |
 |                             |                                                                                                      |           |        |
 +-----------------------------+------------------------------------------------------------------------------------------------------+-----------+--------+
-| `gfc_wrapper_python`_       | .. image:: https://github.com/sepal-contrib/gfc_wrapper_python/actions/workflows/unit.yaml/badge.svg | yes       |        |
-|                             |    :target: https://github.com/sepal-contrib/gfc_wrapper_python/actions/workflows/unit.yaml          |           |        |
-|                             |    :alt: build                                                                                       |           |        |
+| `gfc_wrapper_python`_       | |gfc_wrapper_python_badge|_                                                                         | yes       |        |
+|                             |                                                                                                      |           |        |
+|                             |                                                                                                      |           |        |
 +-----------------------------+------------------------------------------------------------------------------------------------------+-----------+--------+
-| `vector_manager`_           | .. image:: https://github.com/sepal-contrib/vector_manager/actions/workflows/unit.yaml/badge.svg     | yes       |        |
-|                             |    :target: https://github.com/sepal-contrib/vector_manager/actions/workflows/unit.yaml              |           |        |
-|                             |    :alt: build                                                                                       |           |        |
+| `vector_manager`_           | |vector_manager_badge|_                                                                              | yes       |        |
+|                             |                                                                                                      |           |        |
+|                             |                                                                                                      |           |        |
 +-----------------------------+------------------------------------------------------------------------------------------------------+-----------+--------+
-| `clip-time-series`_         | .. image:: https://github.com/sepal-contrib/clip-time-series/actions/workflows/unit.yaml/badge.svg   | yes       |        |
-|                             |    :target: https://github.com/sepal-contrib/clip-time-series/actions/workflows/unit.yaml            |           |        |
-|                             |    :alt: build                                                                                       |           |        |
+| `clip-time-series`_         | |clip_time_series_badge|_                                                                            | yes       |        |
+|                             |                                                                                                      |           |        |
+|                             |                                                                                                      |           |        |
 +-----------------------------+------------------------------------------------------------------------------------------------------+-----------+--------+
-| `alos_mosaics`_             | .. image:: https://github.com/sepal-contrib/alos_mosaics/actions/workflows/unit.yaml/badge.svg       | yes       |        |
-|                             |    :target: https://github.com/sepal-contrib/alos_mosaics/actions/workflows/unit.yaml                |           |        |
-|                             |    :alt: build                                                                                       |           |        |
+| `alos_mosaics`_             | |alos_mosaics_badge|_                                                                                | yes       |        |
+|                             |                                                                                                      |           |        |
+|                             |                                                                                                      |           |        |
 +-----------------------------+------------------------------------------------------------------------------------------------------+-----------+--------+
-| `sdg_15.3.1`_               | .. image:: https://github.com/sepal-contrib/sdg_15.3.1/actions/workflows/unit.yaml/badge.svg         | yes       |        |
-|                             |    :target: https://github.com/sepal-contrib/sdg_15.3.1/actions/workflows/unit.yaml                  |           |        |
-|                             |    :alt: build                                                                                       |           |        |
+| `sdg_15.3.1`_               | |sdg_15_3_1_badge|_                                                                                  | yes       |        |
+|                             |                                                                                                      |           |        |
+|                             |                                                                                                      |           |        |
 +-----------------------------+------------------------------------------------------------------------------------------------------+-----------+--------+
-| `tmf_sepal`_                | .. image:: https://github.com/sepal-contrib/tmf_sepal/actions/workflows/unit.yaml/badge.svg          | yes       |        |
-|                             |    :target: https://github.com/sepal-contrib/tmf_sepal/actions/workflows/unit.yaml                   |           |        |
-|                             |    :alt: build                                                                                       |           |        |
+| `tmf_sepal`_                | |tmf_sepal_badge|_                                                                                   | yes       |        |
+|                             |                                                                                                      |           |        |
+|                             |                                                                                                      |           |        |
 +-----------------------------+------------------------------------------------------------------------------------------------------+-----------+--------+
-| `planet-order`_             | .. image:: https://github.com/sepal-contrib/planet-order/actions/workflows/unit.yaml/badge.svg       | yes       |        |
-|                             |    :target: https://github.com/sepal-contrib/planet-order/actions/workflows/unit.yaml                |           |        |
-|                             |    :alt: build                                                                                       |           |        |
+| `planet-order`_             | |planet_order_badge|_                                                                                | yes       |        |
+|                             |                                                                                                      |           |        |
+|                             |                                                                                                      |           |        |
 +-----------------------------+------------------------------------------------------------------------------------------------------+-----------+--------+
-| `coverage_analysis`_        | .. image:: https://github.com/sepal-contrib/coverage_analysis/actions/workflows/unit.yaml/badge.svg  | yes       |        |
-|                             |    :target: https://github.com/sepal-contrib/coverage_analysis/actions/workflows/unit.yaml           |           |        |
-|                             |    :alt: build                                                                                       |           |        |
+| `coverage_analysis`_        | |coverage_analysis_badge|_                                                                           | yes       |        |
+|                             |                                                                                                      |           |        |
+|                             |                                                                                                      |           |        |
 +-----------------------------+------------------------------------------------------------------------------------------------------+-----------+--------+
-| `fcdm`_                     | .. image:: https://github.com/sepal-contrib/fcdm/actions/workflows/unit.yaml/badge.svg               | yes       |        |
-|                             |    :target: https://github.com/sepal-contrib/fcdm/actions/workflows/unit.yaml                        |           |        |
-|                             |    :alt: build                                                                                       |           |        |
+| `fcdm`_                     | |fcdm_badge|_                                                                                        | yes       |        |
+|                             |                                                                                                      |           |        |
+|                             |                                                                                                      |           |        |
 +-----------------------------+------------------------------------------------------------------------------------------------------+-----------+--------+
-| `basin-rivers`_             | .. image:: https://github.com/sepal-contrib/basin-rivers/actions/workflows/unit.yaml/badge.svg       | yes       |        |
-|                             |    :target: https://github.com/sepal-contrib/basin-rivers/actions/workflows/unit.yaml                |           |        |
-|                             |    :alt: build                                                                                       |           |        |
+| `basin-rivers`_             | |basin_rivers_badge|_                                                                                | yes       |        |
+|                             |                                                                                                      |           |        |
+|                             |                                                                                                      |           |        |
 +-----------------------------+------------------------------------------------------------------------------------------------------+-----------+--------+
-| `gee_source`_               | .. image:: https://github.com/sepal-contrib/gee_source/actions/workflows/unit.yaml/badge.svg         | yes       |        |
-|                             |    :target: https://github.com/sepal-contrib/gee_source/actions/workflows/unit.yaml                  |           |        |
-|                             |    :alt: build                                                                                       |           |        |
+| `gee_source`_               | |gee_source_badge|_                                                                                  | yes       |        |
+|                             |                                                                                                      |           |        |
+|                             |                                                                                                      |           |        |
 +-----------------------------+------------------------------------------------------------------------------------------------------+-----------+--------+
-| `active_fires_explorer`_    | .. image:: https://github.com/sepal-contrib/planet_active_fires_explorer/actions/workflows/unit.yaml | yes       |        |
-|                             |    :target: https://github.com/sepal-contrib/planet_active_fires_explorer/actions/workflows/unit.yaml|           |        |
-|                             |    :alt: build                                                                                       |           |        |
+| `active_fires_explorer`_    | |active_fires_explorer_badge|_                                                                       | yes       |        |
+|                             |                                                                                                      |           |        |
+|                             |                                                                                                      |           |        |
 +-----------------------------+------------------------------------------------------------------------------------------------------+-----------+--------+
-| `sepal_smfm_biota`_         | .. image:: https://github.com/sepal-contrib/sepal_smfm_biota/actions/workflows/unit.yaml/badge.svg   | yes       |        |
-|                             |    :target: https://github.com/sepal-contrib/sepal_smfm_biota/actions/workflows/unit.yaml            |           |        |
-|                             |    :alt: build                                                                                       |           |        |
+| `sepal_smfm_biota`_         | |sepal_smfm_biota_badge|_                                                                            | yes       |        |
+|                             |                                                                                                      |           |        |
+|                             |                                                                                                      |           |        |
 +-----------------------------+------------------------------------------------------------------------------------------------------+-----------+--------+
-| `smfm_deforest`_            | .. image:: https://github.com/smfm-project/deforest/actions/workflows/unit.yaml/badge.svg            | yes       |        |
-|                             |    :target: https://github.com/smfm-project/deforest/actions/workflows/unit.yaml                     |           |        |
-|                             |    :alt: build                                                                                       |           |        |
+| `smfm_deforest`_            | |smfm_deforest_badge|_                                                                               | yes       |        |
+|                             |                                                                                                      |           |        |
+|                             |                                                                                                      |           |        |
 +-----------------------------+------------------------------------------------------------------------------------------------------+-----------+--------+
-| `gwb`_                      | .. image:: https://github.com/sepal-contrib/gwb/actions/workflows/unit.yaml/badge.svg                |           |        |
-|                             |    :target: https://github.com/sepal-contrib/gwb/actions/workflows/unit.yaml                         | yes       |        |
-|                             |    :alt: build                                                                                       |           |        |
+| `gwb`_                      | |gwb_badge|_                                                                                         | yes       |        |
+|                             |                                                                                                      |           |        |
+|                             |                                                                                                      |           |        |
 +-----------------------------+------------------------------------------------------------------------------------------------------+-----------+--------+
-| `damage_proxy_maps`_        | .. image:: https://github.com/sepal-contrib/damage_proxy_maps/actions/workflows/unit.yaml/badge.svg  | yes       |        |
-|                             |    :target: https://github.com/sepal-contrib/damage_proxy_maps/actions/workflows/unit.yaml           |           |        |
-|                             |    :alt: build                                                                                       |           |        |
+| `damage_proxy_maps`_        | |damage_proxy_maps_badge|_                                                                           | yes       |        |
+|                             |                                                                                                      |           |        |
+|                             |                                                                                                      |           |        |
 +-----------------------------+------------------------------------------------------------------------------------------------------+-----------+--------+
-| `cumsum_change`_            | .. image:: https://github.com/sepal-contrib/cumsum_change/actions/workflows/unit.yaml/badge.svg      | yes       |        |
-|                             |    :target: https://github.com/sepal-contrib/cumsum_change/actions/workflows/unit.yaml               |           |        |
-|                             |    :alt: build                                                                                       |           |        |
+| `cumsum_change`_            | |cumsum_change_badge|_                                                                               | yes       |        |
+|                             |                                                                                                      |           |        |
+|                             |                                                                                                      |           |        |
 +-----------------------------+------------------------------------------------------------------------------------------------------+-----------+--------+
-| `weplan`_                   | .. image:: https://github.com/sepal-contrib/weplan/actions/workflows/unit.yaml/badge.svg             | yes       |        |
-|                             |    :target: https://github.com/sepal-contrib/weplan/actions/workflows/unit.yaml                      |           |        |
-|                             |    :alt: build                                                                                       |           |        |
+| `weplan`_                   | |weplan_badge|_                                                                                      | yes       |        |
+|                             |                                                                                                      |           |        |
+|                             |                                                                                                      |           |        |
 +-----------------------------+------------------------------------------------------------------------------------------------------+-----------+--------+
-| `sepal-leafmap`_            | .. image:: https://github.com/sepal-contrib/sepal-leafmap/actions/workflows/unit.yaml/badge.svg      |           |        |
-|                             |    :target: https://github.com/sepal-contrib/sepal-leafmap/actions/workflows/unit.yaml               | yes       |        |
-|                             |    :alt: build                                                                                       |           |        |
+| `sepal-leafmap`_            | |sepal_leafmap_badge|_                                                                               | yes       |        |
+|                             |                                                                                                      |           |        |
+|                             |                                                                                                      |           |        |
 +-----------------------------+------------------------------------------------------------------------------------------------------+-----------+--------+
-| `eSBAE_notebooks`_          | .. image:: https://github.com/sepal-contrib/eSBAE_notebooks/actions/workflows/unit.yaml/badge.svg    |           |        |
-|                             |    :target: https://github.com/sepal-contrib/eSBAE_notebooks/actions/workflows/unit.yaml             |           |        |
-|                             |    :alt: build                                                                                       |           |        |
+| `eSBAE_notebooks`_          | |eSBAE_notebooks_badge|_                                                                             |           |        |
+|                             |                                                                                                      |           |        |
+|                             |                                                                                                      |           |        |
 +-----------------------------+------------------------------------------------------------------------------------------------------+-----------+--------+
-| `bfast_gpu`_                | .. image:: https://github.com/sepal-contrib/bfast_gpu/actions/workflows/unit.yaml/badge.svg          | yes       |        |
-|                             |    :target: https://github.com/sepal-contrib/bfast_gpu/actions/workflows/unit.yaml                   |           |        |
-|                             |    :alt: build                                                                                       |           |        |
+| `bfast_gpu`_                | |bfast_gpu_badge|_                                                                                   | yes       |        |
+|                             |                                                                                                      |           |        |
+|                             |                                                                                                      |           |        |
 +-----------------------------+------------------------------------------------------------------------------------------------------+-----------+--------+
 
 
 
 
 +-----------------------------+------------------------------------------------------------------------------------------------------+-----------+--------+
-| `deforestation-alerts`_     | .. image:: https://github.com/sepal-contrib/deforestation-alerts-module/actions/workflows/unit.yaml/badge.svg | yes       |        |
-|                             |    :target: https://github.com/sepal-contrib/deforestation-alerts-module/actions/workflows/unit.yaml |           |        |
-|                             |    :alt: build                                                                                       |           |        |
+| `deforestation-alerts`_     | |deforestation_alerts_badge|_                                                                       | yes       |        |
+|                             |                                                                                                      |           |        |
+|                             |                                                                                                      |           |        |
 
 
 
@@ -168,3 +168,91 @@
 .. |alert_module_badge| image:: https://github.com/sepal-contrib/alert_module/actions/workflows/unit.yaml/badge.svg
    :alt: build
 .. _alert_module_badge: https://github.com/sepal-contrib/alert_module/actions/workflows/unit.yaml
+
+.. |deforestation_alerts_badge| image:: https://github.com/sepal-contrib/deforestation-alerts-module/actions/workflows/unit.yaml/badge.svg
+   :alt: build
+.. _deforestation_alerts_badge: https://github.com/sepal-contrib/deforestation-alerts-module/actions/workflows/unit.yaml
+
+.. |gfc_wrapper_python_badge| image:: https://github.com/sepal-contrib/gfc_wrapper_python/actions/workflows/unit.yaml/badge.svg
+   :alt: build
+.. _gfc_wrapper_python_badge: https://github.com/sepal-contrib/gfc_wrapper_python/actions/workflows/unit.yaml
+
+.. |vector_manager_badge| image:: https://github.com/sepal-contrib/vector_manager/actions/workflows/unit.yaml/badge.svg
+   :alt: build
+.. _vector_manager_badge: https://github.com/sepal-contrib/vector_manager/actions/workflows/unit.yaml
+
+.. |clip_time_series_badge| image:: https://github.com/sepal-contrib/clip-time-series/actions/workflows/unit.yaml/badge.svg
+   :alt: build
+.. _clip_time_series_badge: https://github.com/sepal-contrib/clip-time-series/actions/workflows/unit.yaml
+
+.. |alos_mosaics_badge| image:: https://github.com/sepal-contrib/alos_mosaics/actions/workflows/unit.yaml/badge.svg
+   :alt: build
+.. _alos_mosaics_badge: https://github.com/sepal-contrib/alos_mosaics/actions/workflows/unit.yaml
+
+.. |sdg_15_3_1_badge| image:: https://github.com/sepal-contrib/sdg_15.3.1/actions/workflows/unit.yaml/badge.svg
+   :alt: build
+.. _sdg_15_3_1_badge: https://github.com/sepal-contrib/sdg_15.3.1/actions/workflows/unit.yaml
+
+.. |tmf_sepal_badge| image:: https://github.com/sepal-contrib/tmf_sepal/actions/workflows/unit.yaml/badge.svg
+   :alt: build
+.. _tmf_sepal_badge: https://github.com/sepal-contrib/tmf_sepal/actions/workflows/unit.yaml
+
+.. |planet_order_badge| image:: https://github.com/sepal-contrib/planet-order/actions/workflows/unit.yaml/badge.svg
+   :alt: build
+.. _planet_order_badge: https://github.com/sepal-contrib/planet-order/actions/workflows/unit.yaml
+
+.. |coverage_analysis_badge| image:: https://github.com/sepal-contrib/coverage_analysis/actions/workflows/unit.yaml/badge.svg
+   :alt: build
+.. _coverage_analysis_badge: https://github.com/sepal-contrib/coverage_analysis/actions/workflows/unit.yaml
+
+.. |fcdm_badge| image:: https://github.com/sepal-contrib/fcdm/actions/workflows/unit.yaml/badge.svg
+   :alt: build
+.. _fcdm_badge: https://github.com/sepal-contrib/fcdm/actions/workflows/unit.yaml
+
+.. |basin_rivers_badge| image:: https://github.com/sepal-contrib/basin-rivers/actions/workflows/unit.yaml/badge.svg
+   :alt: build
+.. _basin_rivers_badge: https://github.com/sepal-contrib/basin-rivers/actions/workflows/unit.yaml
+
+.. |gee_source_badge| image:: https://github.com/sepal-contrib/gee_source/actions/workflows/unit.yaml/badge.svg
+   :alt: build
+.. _gee_source_badge: https://github.com/sepal-contrib/gee_source/actions/workflows/unit.yaml
+
+.. |active_fires_explorer_badge| image:: https://github.com/sepal-contrib/planet_active_fires_explorer/actions/workflows/unit.yaml/badge.svg
+   :alt: build
+.. _active_fires_explorer_badge: https://github.com/sepal-contrib/planet_active_fires_explorer/actions/workflows/unit.yaml
+
+.. |sepal_smfm_biota_badge| image:: https://github.com/sepal-contrib/sepal_smfm_biota/actions/workflows/unit.yaml/badge.svg
+   :alt: build
+.. _sepal_smfm_biota_badge: https://github.com/sepal-contrib/sepal_smfm_biota/actions/workflows/unit.yaml
+
+.. |smfm_deforest_badge| image:: https://github.com/smfm-project/deforest/actions/workflows/unit.yaml/badge.svg
+   :alt: build
+.. _smfm_deforest_badge: https://github.com/smfm-project/deforest/actions/workflows/unit.yaml
+
+.. |gwb_badge| image:: https://github.com/sepal-contrib/gwb/actions/workflows/unit.yaml/badge.svg
+   :alt: build
+.. _gwb_badge: https://github.com/sepal-contrib/gwb/actions/workflows/unit.yaml
+
+.. |damage_proxy_maps_badge| image:: https://github.com/sepal-contrib/damage_proxy_maps/actions/workflows/unit.yaml/badge.svg
+   :alt: build
+.. _damage_proxy_maps_badge: https://github.com/sepal-contrib/damage_proxy_maps/actions/workflows/unit.yaml
+
+.. |cumsum_change_badge| image:: https://github.com/sepal-contrib/cumsum_change/actions/workflows/unit.yaml/badge.svg
+   :alt: build
+.. _cumsum_change_badge: https://github.com/sepal-contrib/cumsum_change/actions/workflows/unit.yaml
+
+.. |weplan_badge| image:: https://github.com/sepal-contrib/weplan/actions/workflows/unit.yaml/badge.svg
+   :alt: build
+.. _weplan_badge: https://github.com/sepal-contrib/weplan/actions/workflows/unit.yaml
+
+.. |sepal_leafmap_badge| image:: https://github.com/sepal-contrib/sepal-leafmap/actions/workflows/unit.yaml/badge.svg
+   :alt: build
+.. _sepal_leafmap_badge: https://github.com/sepal-contrib/sepal-leafmap/actions/workflows/unit.yaml
+
+.. |eSBAE_notebooks_badge| image:: https://github.com/sepal-contrib/eSBAE_notebooks/actions/workflows/unit.yaml/badge.svg
+   :alt: build
+.. _eSBAE_notebooks_badge: https://github.com/sepal-contrib/eSBAE_notebooks/actions/workflows/unit.yaml
+
+.. |bfast_gpu_badge| image:: https://github.com/sepal-contrib/bfast_gpu/actions/workflows/unit.yaml/badge.svg
+   :alt: build
+.. _bfast_gpu_badge: https://github.com/sepal-contrib/bfast_gpu/actions/workflows/unit.yaml
