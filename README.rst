@@ -128,6 +128,10 @@ Jupyter/Conda Modules
 |    |                             |                                                                                                      |           |
 |    |                             |                                                                                                      |           |
 +----+-----------------------------+------------------------------------------------------------------------------------------------------+-----------+
+| 25 | `sbae-design`_              | |sbae_design_badge|_                                                                                 | yes       |
+|    |                             |                                                                                                      |           |
+|    |                             |                                                                                                      |           |
++----+-----------------------------+------------------------------------------------------------------------------------------------------+-----------+
 
 
 
@@ -159,6 +163,7 @@ Jupyter/Conda Modules
 .. _weplan: https://github.com/sepal-contrib/weplan
 .. _sepal-leafmap: https://github.com/sepal-contrib/sepal-leafmap
 .. _eSBAE_notebooks: https://github.com/sepal-contrib/eSBAE_notebooks
+.. _sbae-design: https://github.com/sepal-contrib/sbae-design
 
 .. |sepal_ui_badge| image:: https://github.com/openforis/sepal_ui/actions/workflows/unit.yml/badge.svg
    :alt: build
@@ -263,6 +268,10 @@ Jupyter/Conda Modules
 .. |eSBAE_notebooks_badge| image:: https://github.com/sepal-contrib/eSBAE_notebooks/actions/workflows/unit.yaml/badge.svg
    :alt: build
 .. _eSBAE_notebooks_badge: https://github.com/sepal-contrib/eSBAE_notebooks/actions/workflows/unit.yaml
+
+.. |sbae_design_badge| image:: https://github.com/sepal-contrib/sbae-design/actions/workflows/unit.yaml/badge.svg
+   :alt: build
+.. _sbae_design_badge: https://github.com/sepal-contrib/sbae-design/actions/workflows/unit.yaml
 
 .. |bfast_gpu_badge| image:: https://github.com/sepal-contrib/bfast_gpu/actions/workflows/unit.yaml/badge.svg
    :alt: build
