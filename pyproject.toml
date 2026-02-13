@@ -1,7 +1,7 @@
 [project]
 name = "module-monitor"
 version = "0.1.0"
-description = "Add your description here"
+description = "Tracking and tooling for SEPAL modules across sepal-contrib"
 requires-python = ">=3.12"
 dependencies = [
     "jinja2>=3.1.6",
