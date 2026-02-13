@@ -1,0 +1,60 @@
+{
+  "categories": [
+    {
+      "name": "Core Library",
+      "columns": ["#", "Module name", "Status"],
+      "modules": [
+        {
+          "name": "sepal_ui",
+          "github_url": "https://github.com/openforis/sepal_ui",
+          "badge_workflow": "unit.yml"
+        }
+      ]
+    },
+    {
+      "name": "Solara Modules",
+      "columns": ["#", "Module name", "Status"],
+      "modules": [
+        {"name": "se.plan", "github_url": "https://github.com/sepal-contrib/se.plan"},
+        {"name": "sepal_mgci", "github_url": "https://github.com/sepal-contrib/sepal_mgci"}
+      ]
+    },
+    {
+      "name": "Jupyter/Conda Modules",
+      "columns": ["#", "Module name", "Status", "conda env", "comments"],
+      "modules": [
+        {"name": "sepal_pysmm", "github_url": "https://github.com/sepal-contrib/sepal_pysmm", "conda_env": "yes", "comments": ""},
+        {"name": "gfc_wrapper_python", "github_url": "https://github.com/sepal-contrib/gfc_wrapper_python", "conda_env": "yes", "comments": ""},
+        {"name": "vector_manager", "github_url": "https://github.com/sepal-contrib/vector_manager", "conda_env": "yes", "comments": ""},
+        {"name": "clip-time-series", "github_url": "https://github.com/sepal-contrib/clip-time-series", "conda_env": "yes", "comments": ""},
+        {"name": "alos_mosaics", "github_url": "https://github.com/sepal-contrib/alos_mosaics", "conda_env": "yes", "comments": ""},
+        {"name": "sdg_15.3.1", "github_url": "https://github.com/sepal-contrib/sdg_15.3.1", "conda_env": "yes", "comments": ""},
+        {"name": "tmf_sepal", "github_url": "https://github.com/sepal-contrib/tmf_sepal", "conda_env": "yes", "comments": ""},
+        {"name": "planet-order", "github_url": "https://github.com/sepal-contrib/planet-order", "conda_env": "yes", "comments": ""},
+        {"name": "coverage_analysis", "github_url": "https://github.com/sepal-contrib/coverage_analysis", "conda_env": "yes", "comments": ""},
+        {"name": "fcdm", "github_url": "https://github.com/sepal-contrib/fcdm", "conda_env": "yes", "comments": ""},
+        {"name": "basin-rivers", "github_url": "https://github.com/sepal-contrib/basin-rivers", "conda_env": "yes", "comments": ""},
+        {"name": "gee_source", "github_url": "https://github.com/sepal-contrib/gee_source", "conda_env": "yes", "comments": ""},
+        {"name": "active_fires_explorer", "github_url": "https://github.com/sepal-contrib/planet_active_fires_explorer", "conda_env": "yes", "comments": ""},
+        {"name": "sepal_smfm_biota", "github_url": "https://github.com/sepal-contrib/sepal_smfm_biota", "conda_env": "yes", "comments": ""},
+        {"name": "smfm_deforest", "github_url": "https://github.com/smfm-project/deforest", "conda_env": "yes", "comments": ""},
+        {"name": "gwb", "github_url": "https://github.com/sepal-contrib/gwb", "conda_env": "yes", "comments": ""},
+        {"name": "cumsum_change", "github_url": "https://github.com/sepal-contrib/cumsum_change", "conda_env": "yes", "comments": ""},
+        {"name": "weplan", "github_url": "https://github.com/sepal-contrib/weplan", "conda_env": "yes", "comments": "only in test server"},
+        {"name": "sepal-leafmap", "github_url": "https://github.com/sepal-contrib/sepal-leafmap", "conda_env": "yes", "comments": ""},
+        {"name": "eSBAE_notebooks", "github_url": "https://github.com/sepal-contrib/eSBAE_notebooks", "conda_env": "", "comments": ""},
+        {"name": "deforestation-alerts", "github_url": "https://github.com/sepal-contrib/deforestation-alerts-module", "conda_env": "yes", "comments": ""},
+        {"name": "sbae-design", "github_url": "https://github.com/sepal-contrib/sbae-design", "conda_env": "yes", "comments": ""}
+      ]
+    },
+    {
+      "name": "Legacy Modules (not in prod/test)",
+      "columns": ["#", "Module name", "Status", "conda env", "comments"],
+      "modules": [
+        {"name": "alert_module", "github_url": "https://github.com/sepal-contrib/alert_module", "conda_env": "yes", "comments": ""},
+        {"name": "damage_proxy_maps", "github_url": "https://github.com/sepal-contrib/damage_proxy_maps", "conda_env": "yes", "comments": ""},
+        {"name": "bfast_gpu", "github_url": "https://github.com/sepal-contrib/bfast_gpu", "conda_env": "yes", "comments": ""}
+      ]
+    }
+  ]
+}
