@@ -1,0 +1,50 @@
+{% for cat in categories -%}
+{% if not loop.first %}
+
+{% endif -%}
+{{ cat.name }}
+{{ "=" * (cat.name | length) }}
+
+{% if cat.columns | length == 3 -%}
+{% set sep = "+" ~ "-" * 4 ~ "+" ~ "-" * 29 ~ "+" ~ "-" * 102 ~ "+" -%}
+{% set headsep = "+" ~ "=" * 4 ~ "+" ~ "=" * 29 ~ "+" ~ "=" * 102 ~ "+" -%}
+{{ sep }}
+| {{ "#" | pad(2) }} | {{ "Module name" | pad(27) }} | {{ "Status" | pad(100) }} |
+{{ headsep }}
+{% for mod in cat.modules -%}
+{% set name_cell = "`" ~ mod.name ~ "`_" -%}
+{% set badge_cell = "|" ~ badge_ref(mod.name) ~ "|_" -%}
+| {{ loop.index | string | pad(2) }} | {{ name_cell | pad(27) }} | {{ badge_cell | pad(100) }} |
+|    |                             |                                                                                                      |
+|    |                             |                                                                                                      |
+{{ sep }}
+{% endfor -%}
+{% else -%}
+{% set sep = "+" ~ "-" * 4 ~ "+" ~ "-" * 29 ~ "+" ~ "-" * 102 ~ "+" ~ "-" * 11 ~ "+" ~ "-" * 22 ~ "+" -%}
+{% set headsep = "+" ~ "=" * 4 ~ "+" ~ "=" * 29 ~ "+" ~ "=" * 102 ~ "+" ~ "=" * 11 ~ "+" ~ "=" * 22 ~ "+" -%}
+{{ sep }}
+| {{ "#" | pad(2) }} | {{ "Module name" | pad(27) }} | {{ "Status" | pad(100) }} | {{ "conda env" | pad(9) }} | {{ "comments" | pad(20) }} |
+{{ headsep }}
+{% for mod in cat.modules -%}
+{% set name_cell = "`" ~ mod.name ~ "`_" -%}
+{% set badge_cell = "|" ~ badge_ref(mod.name) ~ "|_" -%}
+{% set conda_cell = mod.get("conda_env", "") -%}
+{% set comments_cell = mod.get("comments", "") -%}
+| {{ loop.index | string | pad(2) }} | {{ name_cell | pad(27) }} | {{ badge_cell | pad(100) }} | {{ conda_cell | pad(9) }} | {{ comments_cell | pad(20) }} |
+{{ sep }}
+{% endfor -%}
+{% endif -%}
+{% endfor %}
+
+
+
+{% for mod in all_modules -%}
+.. _{{ mod.name }}: {{ mod.github_url }}
+{% endfor %}
+{% for mod in all_modules -%}
+.. |{{ badge_ref(mod.name) }}| image:: {{ mod.github_url }}/actions/workflows/{{ get_workflow(mod) }}/badge.svg
+   :alt: build
+.. _{{ badge_ref(mod.name) }}: {{ mod.github_url }}/actions/workflows/{{ get_workflow(mod) }}
+{% if not loop.last %}
+{% endif -%}
+{% endfor -%}

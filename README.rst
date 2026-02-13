@@ -95,9 +95,9 @@ Legacy Modules (not in prod/test)
 
 
 .. _sepal_ui: https://github.com/openforis/sepal_ui
+.. _se.plan: https://github.com/sepal-contrib/se.plan
+.. _sepal_mgci: https://github.com/sepal-contrib/sepal_mgci
 .. _sepal_pysmm: https://github.com/sepal-contrib/sepal_pysmm
-.. _alert_module: https://github.com/sepal-contrib/alert_module
-.. _deforestation-alerts: https://github.com/sepal-contrib/deforestation-alerts-module
 .. _gfc_wrapper_python: https://github.com/sepal-contrib/gfc_wrapper_python
 .. _vector_manager: https://github.com/sepal-contrib/vector_manager
 .. _clip-time-series: https://github.com/sepal-contrib/clip-time-series
@@ -113,15 +113,15 @@ Legacy Modules (not in prod/test)
 .. _sepal_smfm_biota: https://github.com/sepal-contrib/sepal_smfm_biota
 .. _smfm_deforest: https://github.com/smfm-project/deforest
 .. _gwb: https://github.com/sepal-contrib/gwb
-.. _damage_proxy_maps: https://github.com/sepal-contrib/damage_proxy_maps
-.. _se.plan: https://github.com/sepal-contrib/se.plan
-.. _bfast_gpu: https://github.com/sepal-contrib/bfast_gpu
 .. _cumsum_change: https://github.com/sepal-contrib/cumsum_change
-.. _sepal_mgci: https://github.com/sepal-contrib/sepal_mgci
 .. _weplan: https://github.com/sepal-contrib/weplan
 .. _sepal-leafmap: https://github.com/sepal-contrib/sepal-leafmap
 .. _eSBAE_notebooks: https://github.com/sepal-contrib/eSBAE_notebooks
+.. _deforestation-alerts: https://github.com/sepal-contrib/deforestation-alerts-module
 .. _sbae-design: https://github.com/sepal-contrib/sbae-design
+.. _alert_module: https://github.com/sepal-contrib/alert_module
+.. _damage_proxy_maps: https://github.com/sepal-contrib/damage_proxy_maps
+.. _bfast_gpu: https://github.com/sepal-contrib/bfast_gpu
 
 .. |sepal_ui_badge| image:: https://github.com/openforis/sepal_ui/actions/workflows/unit.yml/badge.svg
    :alt: build
@@ -138,14 +138,6 @@ Legacy Modules (not in prod/test)
 .. |sepal_pysmm_badge| image:: https://github.com/sepal-contrib/sepal_pysmm/actions/workflows/unit.yaml/badge.svg
    :alt: build
 .. _sepal_pysmm_badge: https://github.com/sepal-contrib/sepal_pysmm/actions/workflows/unit.yaml
-
-.. |alert_module_badge| image:: https://github.com/sepal-contrib/alert_module/actions/workflows/unit.yaml/badge.svg
-   :alt: build
-.. _alert_module_badge: https://github.com/sepal-contrib/alert_module/actions/workflows/unit.yaml
-
-.. |deforestation_alerts_badge| image:: https://github.com/sepal-contrib/deforestation-alerts-module/actions/workflows/unit.yaml/badge.svg
-   :alt: build
-.. _deforestation_alerts_badge: https://github.com/sepal-contrib/deforestation-alerts-module/actions/workflows/unit.yaml
 
 .. |gfc_wrapper_python_badge| image:: https://github.com/sepal-contrib/gfc_wrapper_python/actions/workflows/unit.yaml/badge.svg
    :alt: build
@@ -207,10 +199,6 @@ Legacy Modules (not in prod/test)
    :alt: build
 .. _gwb_badge: https://github.com/sepal-contrib/gwb/actions/workflows/unit.yaml
 
-.. |damage_proxy_maps_badge| image:: https://github.com/sepal-contrib/damage_proxy_maps/actions/workflows/unit.yaml/badge.svg
-   :alt: build
-.. _damage_proxy_maps_badge: https://github.com/sepal-contrib/damage_proxy_maps/actions/workflows/unit.yaml
-
 .. |cumsum_change_badge| image:: https://github.com/sepal-contrib/cumsum_change/actions/workflows/unit.yaml/badge.svg
    :alt: build
 .. _cumsum_change_badge: https://github.com/sepal-contrib/cumsum_change/actions/workflows/unit.yaml
@@ -227,9 +215,21 @@ Legacy Modules (not in prod/test)
    :alt: build
 .. _eSBAE_notebooks_badge: https://github.com/sepal-contrib/eSBAE_notebooks/actions/workflows/unit.yaml
 
+.. |deforestation_alerts_badge| image:: https://github.com/sepal-contrib/deforestation-alerts-module/actions/workflows/unit.yaml/badge.svg
+   :alt: build
+.. _deforestation_alerts_badge: https://github.com/sepal-contrib/deforestation-alerts-module/actions/workflows/unit.yaml
+
 .. |sbae_design_badge| image:: https://github.com/sepal-contrib/sbae-design/actions/workflows/unit.yaml/badge.svg
    :alt: build
 .. _sbae_design_badge: https://github.com/sepal-contrib/sbae-design/actions/workflows/unit.yaml
+
+.. |alert_module_badge| image:: https://github.com/sepal-contrib/alert_module/actions/workflows/unit.yaml/badge.svg
+   :alt: build
+.. _alert_module_badge: https://github.com/sepal-contrib/alert_module/actions/workflows/unit.yaml
+
+.. |damage_proxy_maps_badge| image:: https://github.com/sepal-contrib/damage_proxy_maps/actions/workflows/unit.yaml/badge.svg
+   :alt: build
+.. _damage_proxy_maps_badge: https://github.com/sepal-contrib/damage_proxy_maps/actions/workflows/unit.yaml
 
 .. |bfast_gpu_badge| image:: https://github.com/sepal-contrib/bfast_gpu/actions/workflows/unit.yaml/badge.svg
    :alt: build
