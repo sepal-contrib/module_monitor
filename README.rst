@@ -93,6 +93,45 @@ Legacy Modules (not in prod/test)
 
 
 
+How this README is generated
+============================
+
+This file is auto-generated from ``modules.json`` using a Jinja2 template.
+Do **not** edit ``README.rst`` directly — your changes will be overwritten.
+
+Setup
+-----
+
+.. code-block:: bash
+
+   # Install dependencies (one time)
+   uv sync
+
+Editing modules
+---------------
+
+1. Edit ``modules.json`` — add, remove, or update module entries.
+2. Regenerate:
+
+.. code-block:: bash
+
+   uv run python scripts/generate_readme.py
+
+3. Commit both ``modules.json`` and ``README.rst``.
+
+JSON structure
+--------------
+
+Each module entry has:
+
+- ``name``: Module display name (used as RST hyperlink reference)
+- ``github_url``: Full GitHub repository URL
+- ``badge_workflow`` *(optional)*: Workflow filename, defaults to ``unit.yaml``
+- ``conda_env`` *(optional)*: ``"yes"`` if the module has a ``sepal_environment.yml``
+- ``comments`` *(optional)*: Free-text notes
+
+Modules are grouped into categories, each with its own table columns.
+
 
 .. _sepal_ui: https://github.com/openforis/sepal_ui
 .. _se.plan: https://github.com/sepal-contrib/se.plan

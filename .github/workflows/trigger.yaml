@@ -1,0 +1,18 @@
+name: Trigger Other Repositories
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  trigger-workflow:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Trigger a workflow in another repo
+      uses: benc-uk/workflow-dispatch@v1
+      with:
+        token: ${{ secrets.ORG_TOKEN }}
+        workflow: Name-of-workflow.yml
+        repo: organization_name/repo_name
+        ref: refs/heads/main

@@ -22,8 +22,9 @@ def pad(value, width: int) -> str:
 
 
 def main():
-    base = Path(__file__).parent
-    with open(base / "modules.json") as f:
+    scripts_dir = Path(__file__).parent
+    project_root = scripts_dir.parent
+    with open(project_root / "modules.json") as f:
         data = json.load(f)
 
     # Flatten all modules across categories for the link/badge sections
@@ -33,7 +34,7 @@ def main():
             all_modules.append(mod)
 
     env = Environment(
-        loader=FileSystemLoader(base),
+        loader=FileSystemLoader(scripts_dir),
         keep_trailing_newline=True,
     )
     env.filters["badge_ref"] = badge_ref
@@ -43,7 +44,7 @@ def main():
 
     template = env.get_template("README.rst.j2")
     output = template.render(categories=data["categories"], all_modules=all_modules)
-    (base / "README.rst").write_text(output)
+    (project_root / "README.rst").write_text(output)
     print("README.rst generated successfully.")
 
 
