@@ -2,58 +2,434 @@
   "categories": [
     {
       "name": "Core Library",
-      "columns": ["#", "Module name", "Status"],
+      "columns": [
+        "#",
+        "Module name",
+        "Status"
+      ],
       "modules": [
         {
           "name": "sepal_ui",
           "github_url": "https://github.com/openforis/sepal_ui",
-          "badge_workflow": "unit.yml"
+          "badge_workflow": "unit.yml",
+          "local_dir": "sepal_ui"
         }
       ]
     },
     {
       "name": "Solara Modules",
-      "columns": ["#", "Module name", "Status"],
+      "columns": [
+        "#",
+        "Module name",
+        "Status"
+      ],
       "modules": [
-        {"name": "se.plan", "github_url": "https://github.com/sepal-contrib/se.plan"},
-        {"name": "sepal_mgci", "github_url": "https://github.com/sepal-contrib/sepal_mgci"}
+        {
+          "name": "se.plan",
+          "github_url": "https://github.com/sepal-contrib/se.plan",
+          "local_dir": "se.plan"
+        },
+        {
+          "name": "sepal_mgci",
+          "github_url": "https://github.com/sepal-contrib/sepal_mgci",
+          "local_dir": "sepal_mgci"
+        }
       ]
     },
     {
       "name": "Jupyter/Conda Modules",
-      "columns": ["#", "Module name", "Status", "conda env", "comments"],
+      "columns": [
+        "#",
+        "Module name",
+        "Status",
+        "conda env",
+        "comments"
+      ],
       "modules": [
-        {"name": "sepal_pysmm", "github_url": "https://github.com/sepal-contrib/sepal_pysmm", "conda_env": "yes", "comments": ""},
-        {"name": "gfc_wrapper_python", "github_url": "https://github.com/sepal-contrib/gfc_wrapper_python", "conda_env": "yes", "comments": ""},
-        {"name": "vector_manager", "github_url": "https://github.com/sepal-contrib/vector_manager", "conda_env": "yes", "comments": ""},
-        {"name": "clip-time-series", "github_url": "https://github.com/sepal-contrib/clip-time-series", "conda_env": "yes", "comments": ""},
-        {"name": "alos_mosaics", "github_url": "https://github.com/sepal-contrib/alos_mosaics", "conda_env": "yes", "comments": ""},
-        {"name": "sdg_15.3.1", "github_url": "https://github.com/sepal-contrib/sdg_15.3.1", "conda_env": "yes", "comments": ""},
-        {"name": "tmf_sepal", "github_url": "https://github.com/sepal-contrib/tmf_sepal", "conda_env": "yes", "comments": ""},
-        {"name": "planet-order", "github_url": "https://github.com/sepal-contrib/planet-order", "conda_env": "yes", "comments": ""},
-        {"name": "coverage_analysis", "github_url": "https://github.com/sepal-contrib/coverage_analysis", "conda_env": "yes", "comments": ""},
-        {"name": "fcdm", "github_url": "https://github.com/sepal-contrib/fcdm", "conda_env": "yes", "comments": ""},
-        {"name": "basin-rivers", "github_url": "https://github.com/sepal-contrib/basin-rivers", "conda_env": "yes", "comments": ""},
-        {"name": "gee_source", "github_url": "https://github.com/sepal-contrib/gee_source", "conda_env": "yes", "comments": ""},
-        {"name": "active_fires_explorer", "github_url": "https://github.com/sepal-contrib/planet_active_fires_explorer", "conda_env": "yes", "comments": ""},
-        {"name": "sepal_smfm_biota", "github_url": "https://github.com/sepal-contrib/sepal_smfm_biota", "conda_env": "yes", "comments": ""},
-        {"name": "smfm_deforest", "github_url": "https://github.com/smfm-project/deforest", "conda_env": "yes", "comments": ""},
-        {"name": "gwb", "github_url": "https://github.com/sepal-contrib/gwb", "conda_env": "yes", "comments": ""},
-        {"name": "cumsum_change", "github_url": "https://github.com/sepal-contrib/cumsum_change", "conda_env": "yes", "comments": ""},
-        {"name": "weplan", "github_url": "https://github.com/sepal-contrib/weplan", "conda_env": "yes", "comments": "only in test server"},
-        {"name": "sepal-leafmap", "github_url": "https://github.com/sepal-contrib/sepal-leafmap", "conda_env": "yes", "comments": ""},
-        {"name": "eSBAE_notebooks", "github_url": "https://github.com/sepal-contrib/eSBAE_notebooks", "conda_env": "", "comments": ""},
-        {"name": "deforestation-alerts", "github_url": "https://github.com/sepal-contrib/deforestation-alerts-module", "conda_env": "yes", "comments": ""},
-        {"name": "sbae-design", "github_url": "https://github.com/sepal-contrib/sbae-design", "conda_env": "yes", "comments": ""}
+        {
+          "name": "sepal_pysmm",
+          "github_url": "https://github.com/sepal-contrib/sepal_pysmm",
+          "conda_env": "yes",
+          "comments": "",
+          "local_dir": "sepal_pysmm",
+          "migration": {
+            "status": "audited",
+            "complexity": "high",
+            "merge_candidate": null,
+            "merge_target": null,
+            "blockers": [],
+            "last_session_date": "2026-02-23",
+            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+          }
+        },
+        {
+          "name": "gfc_wrapper_python",
+          "github_url": "https://github.com/sepal-contrib/gfc_wrapper_python",
+          "conda_env": "yes",
+          "comments": "",
+          "local_dir": "gfc_wrapper_python",
+          "migration": {
+            "status": "audited",
+            "complexity": "medium",
+            "merge_candidate": null,
+            "merge_target": null,
+            "blockers": [],
+            "last_session_date": "2026-02-23",
+            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+          }
+        },
+        {
+          "name": "vector_manager",
+          "github_url": "https://github.com/sepal-contrib/vector_manager",
+          "conda_env": "yes",
+          "comments": "",
+          "local_dir": "vector_manager",
+          "migration": {
+            "status": "audited",
+            "complexity": "medium",
+            "merge_candidate": null,
+            "merge_target": null,
+            "blockers": [],
+            "last_session_date": "2026-02-23",
+            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+          }
+        },
+        {
+          "name": "clip-time-series",
+          "github_url": "https://github.com/sepal-contrib/clip-time-series",
+          "conda_env": "yes",
+          "comments": "",
+          "local_dir": "clip-time-series",
+          "migration": {
+            "status": "audited",
+            "complexity": "medium",
+            "merge_candidate": null,
+            "merge_target": null,
+            "blockers": [],
+            "last_session_date": "2026-02-23",
+            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+          }
+        },
+        {
+          "name": "alos_mosaics",
+          "github_url": "https://github.com/sepal-contrib/alos_mosaics",
+          "conda_env": "yes",
+          "comments": "",
+          "local_dir": "alos_mosaics",
+          "migration": {
+            "status": "audited",
+            "complexity": "medium",
+            "merge_candidate": null,
+            "merge_target": null,
+            "blockers": [],
+            "last_session_date": "2026-02-23",
+            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+          }
+        },
+        {
+          "name": "sdg_15.3.1",
+          "github_url": "https://github.com/sepal-contrib/sdg_15.3.1",
+          "conda_env": "yes",
+          "comments": "",
+          "local_dir": "sdg_15.3.1",
+          "migration": {
+            "status": "audited",
+            "complexity": "high",
+            "merge_candidate": null,
+            "merge_target": null,
+            "blockers": [],
+            "last_session_date": "2026-02-23",
+            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+          }
+        },
+        {
+          "name": "tmf_sepal",
+          "github_url": "https://github.com/sepal-contrib/tmf_sepal",
+          "conda_env": "yes",
+          "comments": "",
+          "local_dir": "tmf_sepal",
+          "migration": {
+            "status": "audited",
+            "complexity": "low",
+            "merge_candidate": null,
+            "merge_target": null,
+            "blockers": [],
+            "last_session_date": "2026-02-23",
+            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+          }
+        },
+        {
+          "name": "planet-order",
+          "github_url": "https://github.com/sepal-contrib/planet-order",
+          "conda_env": "yes",
+          "comments": "",
+          "local_dir": "planet-order",
+          "migration": {
+            "status": "audited",
+            "complexity": "medium",
+            "merge_candidate": null,
+            "merge_target": null,
+            "blockers": [],
+            "last_session_date": "2026-02-23",
+            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+          }
+        },
+        {
+          "name": "coverage_analysis",
+          "github_url": "https://github.com/sepal-contrib/coverage_analysis",
+          "conda_env": "yes",
+          "comments": "",
+          "local_dir": "coverage_analysis",
+          "migration": {
+            "status": "audited",
+            "complexity": "medium",
+            "merge_candidate": null,
+            "merge_target": null,
+            "blockers": [],
+            "last_session_date": "2026-02-23",
+            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+          }
+        },
+        {
+          "name": "fcdm",
+          "github_url": "https://github.com/sepal-contrib/fcdm",
+          "conda_env": "yes",
+          "comments": "",
+          "local_dir": "fcdm",
+          "migration": {
+            "status": "audited",
+            "complexity": "high",
+            "merge_candidate": null,
+            "merge_target": null,
+            "blockers": [],
+            "last_session_date": "2026-02-23",
+            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+          }
+        },
+        {
+          "name": "basin-rivers",
+          "github_url": "https://github.com/sepal-contrib/basin-rivers",
+          "conda_env": "yes",
+          "comments": "",
+          "local_dir": "basin-rivers",
+          "migration": {
+            "status": "audited",
+            "complexity": "medium",
+            "merge_candidate": null,
+            "merge_target": null,
+            "blockers": [],
+            "last_session_date": "2026-02-23",
+            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+          }
+        },
+        {
+          "name": "gee_source",
+          "github_url": "https://github.com/sepal-contrib/gee_source",
+          "conda_env": "yes",
+          "comments": "",
+          "local_dir": "gee_source",
+          "migration": {
+            "status": "audited",
+            "complexity": "low",
+            "merge_candidate": null,
+            "merge_target": null,
+            "blockers": [],
+            "last_session_date": "2026-02-23",
+            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+          }
+        },
+        {
+          "name": "active_fires_explorer",
+          "github_url": "https://github.com/sepal-contrib/planet_active_fires_explorer",
+          "conda_env": "yes",
+          "comments": "",
+          "local_dir": "active-fires-explorer",
+          "migration": {
+            "status": "audited",
+            "complexity": "medium",
+            "merge_candidate": null,
+            "merge_target": null,
+            "blockers": [],
+            "last_session_date": "2026-02-23",
+            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+          }
+        },
+        {
+          "name": "sepal_smfm_biota",
+          "github_url": "https://github.com/sepal-contrib/sepal_smfm_biota",
+          "conda_env": "yes",
+          "comments": "",
+          "local_dir": "sepal_smfm_biota",
+          "migration": {
+            "status": "audited",
+            "complexity": "low",
+            "merge_candidate": null,
+            "merge_target": null,
+            "blockers": [],
+            "last_session_date": "2026-02-23",
+            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+          }
+        },
+        {
+          "name": "smfm_deforest",
+          "github_url": "https://github.com/smfm-project/deforest",
+          "conda_env": "yes",
+          "comments": "external repo, not cloned locally",
+          "local_dir": null,
+          "migration": {
+            "status": "skip",
+            "complexity": null,
+            "merge_candidate": null,
+            "merge_target": null,
+            "blockers": [
+              "external repo \u2014 not under sepal-contrib"
+            ],
+            "last_session_date": null,
+            "last_session_summary": null
+          }
+        },
+        {
+          "name": "gwb",
+          "github_url": "https://github.com/sepal-contrib/gwb",
+          "conda_env": "yes",
+          "comments": "",
+          "local_dir": "gwb",
+          "migration": {
+            "status": "audited",
+            "complexity": "high",
+            "merge_candidate": null,
+            "merge_target": null,
+            "blockers": [],
+            "last_session_date": "2026-02-23",
+            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+          }
+        },
+        {
+          "name": "cumsum_change",
+          "github_url": "https://github.com/sepal-contrib/cumsum_change",
+          "conda_env": "yes",
+          "comments": "",
+          "local_dir": "cumsum_change",
+          "migration": {
+            "status": "audited",
+            "complexity": "medium",
+            "merge_candidate": null,
+            "merge_target": null,
+            "blockers": [],
+            "last_session_date": "2026-02-23",
+            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+          }
+        },
+        {
+          "name": "weplan",
+          "github_url": "https://github.com/sepal-contrib/weplan",
+          "conda_env": "yes",
+          "comments": "only in test server",
+          "local_dir": "weplan",
+          "migration": {
+            "status": "audited",
+            "complexity": "medium",
+            "merge_candidate": null,
+            "merge_target": null,
+            "blockers": [],
+            "last_session_date": "2026-02-23",
+            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+          }
+        },
+        {
+          "name": "sepal-leafmap",
+          "github_url": "https://github.com/sepal-contrib/sepal-leafmap",
+          "conda_env": "yes",
+          "comments": "",
+          "local_dir": "sepal-leafmap",
+          "migration": {
+            "status": "audited",
+            "complexity": "low",
+            "merge_candidate": null,
+            "merge_target": null,
+            "blockers": [],
+            "last_session_date": "2026-02-23",
+            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+          }
+        },
+        {
+          "name": "eSBAE_notebooks",
+          "github_url": "https://github.com/sepal-contrib/eSBAE_notebooks",
+          "conda_env": "",
+          "comments": "notebooks, not a standard module",
+          "local_dir": "eSBAE_notebooks",
+          "migration": {
+            "status": "audited",
+            "complexity": "low",
+            "merge_candidate": null,
+            "merge_target": null,
+            "blockers": [],
+            "last_session_date": "2026-02-23",
+            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+          }
+        },
+        {
+          "name": "deforestation-alerts",
+          "github_url": "https://github.com/sepal-contrib/deforestation-alerts-module",
+          "conda_env": "yes",
+          "comments": "",
+          "local_dir": "deforestation-alerts-module",
+          "migration": {
+            "status": "audited",
+            "complexity": "high",
+            "merge_candidate": null,
+            "merge_target": null,
+            "blockers": [],
+            "last_session_date": "2026-02-23",
+            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+          }
+        },
+        {
+          "name": "sbae-design",
+          "github_url": "https://github.com/sepal-contrib/sbae-design",
+          "conda_env": "yes",
+          "comments": "reference Solara implementation",
+          "local_dir": "sbae-design",
+          "migration": {
+            "status": "done",
+            "complexity": null,
+            "merge_candidate": null,
+            "merge_target": null,
+            "blockers": [],
+            "last_session_date": null,
+            "last_session_summary": "Already a pure Solara app \u2014 serves as reference architecture"
+          }
+        }
       ]
     },
     {
       "name": "Legacy Modules (not in prod/test)",
-      "columns": ["#", "Module name", "Status", "conda env", "comments"],
+      "columns": [
+        "#",
+        "Module name",
+        "Status",
+        "conda env",
+        "comments"
+      ],
       "modules": [
-        {"name": "alert_module", "github_url": "https://github.com/sepal-contrib/alert_module", "conda_env": "yes", "comments": ""},
-        {"name": "damage_proxy_maps", "github_url": "https://github.com/sepal-contrib/damage_proxy_maps", "conda_env": "yes", "comments": ""},
-        {"name": "bfast_gpu", "github_url": "https://github.com/sepal-contrib/bfast_gpu", "conda_env": "yes", "comments": ""}
+        {
+          "name": "alert_module",
+          "github_url": "https://github.com/sepal-contrib/alert_module",
+          "conda_env": "yes",
+          "comments": ""
+        },
+        {
+          "name": "damage_proxy_maps",
+          "github_url": "https://github.com/sepal-contrib/damage_proxy_maps",
+          "conda_env": "yes",
+          "comments": ""
+        },
+        {
+          "name": "bfast_gpu",
+          "github_url": "https://github.com/sepal-contrib/bfast_gpu",
+          "conda_env": "yes",
+          "comments": ""
+        }
       ]
     }
   ]

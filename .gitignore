@@ -164,4 +164,3 @@ cython_debug/
 # Project-specific
 docs/plans/
 tasks/
-CLAUDE.md

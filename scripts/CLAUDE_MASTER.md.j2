@@ -1,0 +1,130 @@
+# CLAUDE.md — SEPAL Module Migration Orchestrator
+
+This file is auto-generated from `modules.json` using `scripts/generate_claude_md.py`.
+Do **not** edit directly — your changes will be overwritten.
+
+## Purpose
+
+This repository orchestrates the migration of SEPAL modules from Jupyter/ipyleaflet/voila to pure Solara apps. It tracks migration status, complexity, blockers, and session history for {{ jupyter_modules | length }} Jupyter/Conda modules.
+
+## Status Dashboard
+
+| # | Module | Status | Complexity | Last Session |
+|---|--------|--------|------------|--------------|
+{% for mod in jupyter_modules -%}
+| {{ loop.index }} | [{{ mod.name }}]({{ mod.github_url }}) | {{ mod.migration.status }} | {{ mod.migration.complexity or "—" }} | {{ mod.migration.last_session_date or "—" }} |
+{% endfor %}
+
+## Summary
+
+- **Done**: {{ counts.done }}
+- **In Progress**: {{ counts.in_progress }}
+- **Audited**: {{ counts.audited }}
+- **Blocked**: {{ counts.blocked }}
+- **Skip**: {{ counts.skip }}
+- **Not Started**: {{ counts.not_started }}
+
+## Reference Architecture (sbae-design)
+
+Target pattern for all migrated modules:
+
+```python
+# app.py — Entry point
+import solara
+from sepal_ui.sepalwidgets.vue_app import MapApp, ThemeToggle
+from sepal_ui.solara import setup_sessions, setup_solara_server, setup_theme_colors
+
+setup_solara_server()
+
+@solara.lab.on_kernel_start
+def on_kernel_start():
+    return setup_sessions()
+
+@solara.component
+def Page():
+    setup_theme_colors()
+    theme_toggle = ThemeToggle()
+
+    steps_data = [
+        {"id": 1, "name": "Step Name", "icon": "mdi-icon", "display": "step", "content": [TileWidget()]},
+        # ... more steps
+    ]
+
+    MapApp.element(
+        app_title="Module Title",
+        app_icon="mdi-icon",
+        main_map=[map_widget],
+        steps_data=steps_data,
+        theme_toggle=[theme_toggle],
+    )
+
+routes = [solara.Route(path="/", component=Page, label="App")]
+```
+
+Key patterns:
+- **Entry point**: `app.py` with `@solara.component def Page()`
+- **Layout**: `MapApp.element(...)` from sepal_ui
+- **Session**: `setup_sessions()` + `@solara.lab.on_kernel_start`
+- **Theme**: `ThemeToggle` + `setup_theme_colors()`
+- **Components**: `component/{config,model,tile,widget,scripts}/`
+- **Dev server**: `solara run app.py --port 8901`
+
+## Workflow: Migrating a Module
+
+### 1. Pick next module
+Choose the next `not_started` or `audited` module by priority (low complexity first).
+
+### 2. Open session in the module repo
+```bash
+cd /home/dguerrero/1_modules/{local_dir}
+```
+The repo's `CLAUDE.md` contains the full assessment and migration playbook.
+
+### 3. Execute migration
+Follow the per-repo CLAUDE.md migration plan step by step.
+
+### 4. Update status
+After the session, update `modules.json`:
+- Set `migration.status` to the new status
+- Set `migration.last_session_date` to today's date
+- Write a brief `migration.last_session_summary`
+- Update `migration.complexity` if reassessed
+
+### 5. Regenerate
+```bash
+cd /home/dguerrero/1_modules/module_monitor
+uv run python scripts/generate_claude_md.py
+uv run python scripts/generate_readme.py
+```
+
+{% if merge_candidates %}
+## Merge Candidates
+
+These modules may be functionally similar and could be consolidated:
+
+| Module | Merge Target | Notes |
+|--------|-------------|-------|
+{% for mod in merge_candidates -%}
+| {{ mod.name }} | {{ mod.migration.merge_target or "TBD" }} | {{ mod.migration.merge_candidate or "" }} |
+{% endfor %}
+{% endif %}
+
+## Key Files
+
+| File | Role |
+|------|------|
+| `modules.json` | Source of truth — migration metadata per module |
+| `scripts/generate_claude_md.py` | Generates this CLAUDE.md from modules.json |
+| `scripts/generate_readme.py` | Generates README.rst from modules.json |
+| `scripts/CLAUDE_MASTER.md.j2` | Jinja2 template for this file |
+| `scripts/README.rst.j2` | Jinja2 template for README.rst |
+
+## Module Directories
+
+All repos are cloned at `/home/dguerrero/1_modules/`. Each migrating module has a `CLAUDE.md` with its specific assessment and playbook.
+
+{% for mod in jupyter_modules -%}
+{% if mod.local_dir -%}
+- `{{ mod.local_dir }}/` — {{ mod.name }} ({{ mod.migration.status }})
+{% endif -%}
+{% endfor %}
