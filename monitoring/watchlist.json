@@ -1,0 +1,208 @@
+{
+  "meta": {
+    "last_scan": null,
+    "scan_frequency": "weekly"
+  },
+  "tiers": {
+    "critical": {
+      "description": "Direct sepal_ui deps that could cause breakage",
+      "packages": [
+        {
+          "name": "solara",
+          "pypi": "solara",
+          "github": "widgetti/solara",
+          "reason": "core web framework for Solara migration"
+        },
+        {
+          "name": "ipyleaflet",
+          "pypi": "ipyleaflet",
+          "github": "jupyter-widgets/ipyleaflet",
+          "reason": "map rendering"
+        },
+        {
+          "name": "ipyvuetify",
+          "pypi": "ipyvuetify",
+          "github": "widgetti/ipyvuetify",
+          "reason": "widget layer"
+        },
+        {
+          "name": "earthengine-api",
+          "pypi": "earthengine-api",
+          "github": "google/earthengine-api",
+          "reason": "GEE operations"
+        },
+        {
+          "name": "planet",
+          "pypi": "planet",
+          "github": "planetlabs/planet-client-python",
+          "reason": "Planet API"
+        },
+        {
+          "name": "geopandas",
+          "pypi": "geopandas",
+          "github": "geopandas/geopandas",
+          "reason": "vector data"
+        },
+        {
+          "name": "rioxarray",
+          "pypi": "rioxarray",
+          "github": "corteva/rioxarray",
+          "reason": "raster I/O"
+        }
+      ]
+    },
+    "important": {
+      "description": "Used by sepal_ui or modules, less likely to cause breakage",
+      "packages": [
+        {
+          "name": "localtileserver",
+          "pypi": "localtileserver",
+          "github": "banesullivan/localtileserver",
+          "reason": "local raster tile serving"
+        },
+        {
+          "name": "matplotlib",
+          "pypi": "matplotlib",
+          "github": "matplotlib/matplotlib",
+          "reason": "plotting"
+        },
+        {
+          "name": "dask",
+          "pypi": "dask",
+          "github": "dask/dask",
+          "reason": "parallel compute for rioxarray"
+        },
+        {
+          "name": "pyarrow",
+          "pypi": "pyarrow",
+          "github": "apache/arrow",
+          "reason": "data format"
+        },
+        {
+          "name": "ee-client",
+          "pypi": "ee-client",
+          "github": "gee-community/ee-client",
+          "reason": "GEE caching layer"
+        },
+        {
+          "name": "pygaul",
+          "pypi": "pygaul",
+          "github": "12rambau/pygaul",
+          "reason": "GAUL boundaries"
+        },
+        {
+          "name": "pygadm",
+          "pypi": "pygadm",
+          "github": "12rambau/pygadm",
+          "reason": "GADM boundaries"
+        },
+        {
+          "name": "ipykernel",
+          "pypi": "ipykernel",
+          "github": "ipython/ipykernel",
+          "reason": "Jupyter kernel"
+        },
+        {
+          "name": "jupyter-server-proxy",
+          "pypi": "jupyter-server-proxy",
+          "github": "jupyterhub/jupyter-server-proxy",
+          "reason": "proxy for localtileserver"
+        },
+        {
+          "name": "python-box",
+          "pypi": "python-box",
+          "github": "cdgriffith/Box",
+          "reason": "dict wrapper"
+        },
+        {
+          "name": "reactivex",
+          "pypi": "reactivex",
+          "github": "ReactiveX/RxPY",
+          "reason": "reactive extensions"
+        }
+      ]
+    },
+    "ecosystem": {
+      "description": "Not currently used but potentially valuable",
+      "packages": [
+        {
+          "name": "leafmap",
+          "pypi": "leafmap",
+          "github": "opengeo/leafmap",
+          "reason": "advanced mapping features"
+        },
+        {
+          "name": "geemap",
+          "pypi": "geemap",
+          "github": "gee-community/geemap",
+          "reason": "GEE visualization"
+        },
+        {
+          "name": "geetools",
+          "pypi": "geetools",
+          "github": "gee-community/geetools",
+          "reason": "GEE utilities"
+        },
+        {
+          "name": "pystac-client",
+          "pypi": "pystac-client",
+          "github": "stac-utils/pystac-client",
+          "reason": "STAC catalogs"
+        },
+        {
+          "name": "odc-stac",
+          "pypi": "odc-stac",
+          "github": "opendatacube/odc-stac",
+          "reason": "STAC loading"
+        },
+        {
+          "name": "xarray-spatial",
+          "pypi": "xarray-spatial",
+          "github": "makepath/xarray-spatial",
+          "reason": "raster analytics"
+        },
+        {
+          "name": "stackstac",
+          "pypi": "stackstac",
+          "github": "gjoseph92/stackstac",
+          "reason": "STAC to xarray"
+        },
+        {
+          "name": "planetary-computer",
+          "pypi": "planetary-computer",
+          "github": "microsoft/planetary-computer-sdk-for-python",
+          "reason": "Microsoft PC SDK"
+        }
+      ]
+    },
+    "ai_ml": {
+      "description": "AI/ML tools for remote sensing",
+      "packages": [
+        {
+          "name": "segment-geospatial",
+          "pypi": "segment-geospatial",
+          "github": "opengeo/segment-geospatial",
+          "reason": "SAM for geo"
+        },
+        {
+          "name": "torchgeo",
+          "pypi": "torchgeo",
+          "github": "microsoft/torchgeo",
+          "reason": "ML datasets and models"
+        },
+        {
+          "name": "rastervision",
+          "pypi": "rastervision",
+          "github": "azavea/raster-vision",
+          "reason": "deep learning pipeline"
+        },
+        {
+          "name": "samgeo",
+          "pypi": "samgeo",
+          "github": "opengeo/segment-geospatial",
+          "reason": "SAM geospatial"
+        }
+      ]
+    }
+  }
+}
