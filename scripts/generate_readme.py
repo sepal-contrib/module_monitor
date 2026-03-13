@@ -13,7 +13,11 @@ def badge_ref(name: str) -> str:
 
 def get_workflow(mod: dict) -> str:
     """Get the workflow filename for a module."""
-    return mod.get("badge_workflow", "unit.yaml")
+    if mod.get("badge_workflow"):
+        return mod["badge_workflow"]
+    if mod.get("ci") and not mod["ci"].get("skip"):
+        return "ci.yaml"
+    return "unit.yaml"
 
 
 def pad(value, width: int) -> str:

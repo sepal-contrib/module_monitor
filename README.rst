@@ -126,7 +126,7 @@ Each module entry has:
 
 - ``name``: Module display name (used as RST hyperlink reference)
 - ``github_url``: Full GitHub repository URL
-- ``badge_workflow`` *(optional)*: Workflow filename, defaults to ``unit.yaml``
+- ``badge_workflow`` *(optional)*: Workflow filename, defaults to ``ci.yaml`` for modules with a ``ci`` config, otherwise ``unit.yaml``
 - ``conda_env`` *(optional)*: ``"yes"`` if the module has a ``sepal_environment.yml``
 - ``comments`` *(optional)*: Free-text notes
 
@@ -174,89 +174,89 @@ Modules are grouped into categories, each with its own table columns.
    :alt: build
 .. _sepal_mgci_badge: https://github.com/sepal-contrib/sepal_mgci/actions/workflows/unit.yaml
 
-.. |sepal_pysmm_badge| image:: https://github.com/sepal-contrib/sepal_pysmm/actions/workflows/unit.yaml/badge.svg
+.. |sepal_pysmm_badge| image:: https://github.com/sepal-contrib/sepal_pysmm/actions/workflows/ci.yaml/badge.svg
    :alt: build
-.. _sepal_pysmm_badge: https://github.com/sepal-contrib/sepal_pysmm/actions/workflows/unit.yaml
+.. _sepal_pysmm_badge: https://github.com/sepal-contrib/sepal_pysmm/actions/workflows/ci.yaml
 
-.. |gfc_wrapper_python_badge| image:: https://github.com/sepal-contrib/gfc_wrapper_python/actions/workflows/unit.yaml/badge.svg
+.. |gfc_wrapper_python_badge| image:: https://github.com/sepal-contrib/gfc_wrapper_python/actions/workflows/ci.yaml/badge.svg
    :alt: build
-.. _gfc_wrapper_python_badge: https://github.com/sepal-contrib/gfc_wrapper_python/actions/workflows/unit.yaml
+.. _gfc_wrapper_python_badge: https://github.com/sepal-contrib/gfc_wrapper_python/actions/workflows/ci.yaml
 
-.. |vector_manager_badge| image:: https://github.com/sepal-contrib/vector_manager/actions/workflows/unit.yaml/badge.svg
+.. |vector_manager_badge| image:: https://github.com/sepal-contrib/vector_manager/actions/workflows/ci.yaml/badge.svg
    :alt: build
-.. _vector_manager_badge: https://github.com/sepal-contrib/vector_manager/actions/workflows/unit.yaml
+.. _vector_manager_badge: https://github.com/sepal-contrib/vector_manager/actions/workflows/ci.yaml
 
-.. |clip_time_series_badge| image:: https://github.com/sepal-contrib/clip-time-series/actions/workflows/unit.yaml/badge.svg
+.. |clip_time_series_badge| image:: https://github.com/sepal-contrib/clip-time-series/actions/workflows/ci.yaml/badge.svg
    :alt: build
-.. _clip_time_series_badge: https://github.com/sepal-contrib/clip-time-series/actions/workflows/unit.yaml
+.. _clip_time_series_badge: https://github.com/sepal-contrib/clip-time-series/actions/workflows/ci.yaml
 
-.. |alos_mosaics_badge| image:: https://github.com/sepal-contrib/alos_mosaics/actions/workflows/unit.yaml/badge.svg
+.. |alos_mosaics_badge| image:: https://github.com/sepal-contrib/alos_mosaics/actions/workflows/ci.yaml/badge.svg
    :alt: build
-.. _alos_mosaics_badge: https://github.com/sepal-contrib/alos_mosaics/actions/workflows/unit.yaml
+.. _alos_mosaics_badge: https://github.com/sepal-contrib/alos_mosaics/actions/workflows/ci.yaml
 
-.. |sdg_15_3_1_badge| image:: https://github.com/sepal-contrib/sdg_15.3.1/actions/workflows/unit.yaml/badge.svg
+.. |sdg_15_3_1_badge| image:: https://github.com/sepal-contrib/sdg_15.3.1/actions/workflows/ci.yaml/badge.svg
    :alt: build
-.. _sdg_15_3_1_badge: https://github.com/sepal-contrib/sdg_15.3.1/actions/workflows/unit.yaml
+.. _sdg_15_3_1_badge: https://github.com/sepal-contrib/sdg_15.3.1/actions/workflows/ci.yaml
 
-.. |tmf_sepal_badge| image:: https://github.com/sepal-contrib/tmf_sepal/actions/workflows/unit.yaml/badge.svg
+.. |tmf_sepal_badge| image:: https://github.com/sepal-contrib/tmf_sepal/actions/workflows/ci.yaml/badge.svg
    :alt: build
-.. _tmf_sepal_badge: https://github.com/sepal-contrib/tmf_sepal/actions/workflows/unit.yaml
+.. _tmf_sepal_badge: https://github.com/sepal-contrib/tmf_sepal/actions/workflows/ci.yaml
 
-.. |planet_order_badge| image:: https://github.com/sepal-contrib/planet-order/actions/workflows/unit.yaml/badge.svg
+.. |planet_order_badge| image:: https://github.com/sepal-contrib/planet-order/actions/workflows/ci.yaml/badge.svg
    :alt: build
-.. _planet_order_badge: https://github.com/sepal-contrib/planet-order/actions/workflows/unit.yaml
+.. _planet_order_badge: https://github.com/sepal-contrib/planet-order/actions/workflows/ci.yaml
 
-.. |coverage_analysis_badge| image:: https://github.com/sepal-contrib/coverage_analysis/actions/workflows/unit.yaml/badge.svg
+.. |coverage_analysis_badge| image:: https://github.com/sepal-contrib/coverage_analysis/actions/workflows/ci.yaml/badge.svg
    :alt: build
-.. _coverage_analysis_badge: https://github.com/sepal-contrib/coverage_analysis/actions/workflows/unit.yaml
+.. _coverage_analysis_badge: https://github.com/sepal-contrib/coverage_analysis/actions/workflows/ci.yaml
 
-.. |fcdm_badge| image:: https://github.com/sepal-contrib/fcdm/actions/workflows/unit.yaml/badge.svg
+.. |fcdm_badge| image:: https://github.com/sepal-contrib/fcdm/actions/workflows/ci.yaml/badge.svg
    :alt: build
-.. _fcdm_badge: https://github.com/sepal-contrib/fcdm/actions/workflows/unit.yaml
+.. _fcdm_badge: https://github.com/sepal-contrib/fcdm/actions/workflows/ci.yaml
 
-.. |basin_rivers_badge| image:: https://github.com/sepal-contrib/basin-rivers/actions/workflows/unit.yaml/badge.svg
+.. |basin_rivers_badge| image:: https://github.com/sepal-contrib/basin-rivers/actions/workflows/ci.yaml/badge.svg
    :alt: build
-.. _basin_rivers_badge: https://github.com/sepal-contrib/basin-rivers/actions/workflows/unit.yaml
+.. _basin_rivers_badge: https://github.com/sepal-contrib/basin-rivers/actions/workflows/ci.yaml
 
-.. |gee_source_badge| image:: https://github.com/sepal-contrib/gee_source/actions/workflows/unit.yaml/badge.svg
+.. |gee_source_badge| image:: https://github.com/sepal-contrib/gee_source/actions/workflows/ci.yaml/badge.svg
    :alt: build
-.. _gee_source_badge: https://github.com/sepal-contrib/gee_source/actions/workflows/unit.yaml
+.. _gee_source_badge: https://github.com/sepal-contrib/gee_source/actions/workflows/ci.yaml
 
-.. |active_fires_explorer_badge| image:: https://github.com/sepal-contrib/planet_active_fires_explorer/actions/workflows/unit.yaml/badge.svg
+.. |active_fires_explorer_badge| image:: https://github.com/sepal-contrib/planet_active_fires_explorer/actions/workflows/ci.yaml/badge.svg
    :alt: build
-.. _active_fires_explorer_badge: https://github.com/sepal-contrib/planet_active_fires_explorer/actions/workflows/unit.yaml
+.. _active_fires_explorer_badge: https://github.com/sepal-contrib/planet_active_fires_explorer/actions/workflows/ci.yaml
 
-.. |sepal_smfm_biota_badge| image:: https://github.com/sepal-contrib/sepal_smfm_biota/actions/workflows/unit.yaml/badge.svg
+.. |sepal_smfm_biota_badge| image:: https://github.com/sepal-contrib/sepal_smfm_biota/actions/workflows/ci.yaml/badge.svg
    :alt: build
-.. _sepal_smfm_biota_badge: https://github.com/sepal-contrib/sepal_smfm_biota/actions/workflows/unit.yaml
+.. _sepal_smfm_biota_badge: https://github.com/sepal-contrib/sepal_smfm_biota/actions/workflows/ci.yaml
 
 .. |smfm_deforest_badge| image:: https://github.com/smfm-project/deforest/actions/workflows/unit.yaml/badge.svg
    :alt: build
 .. _smfm_deforest_badge: https://github.com/smfm-project/deforest/actions/workflows/unit.yaml
 
-.. |gwb_badge| image:: https://github.com/sepal-contrib/gwb/actions/workflows/unit.yaml/badge.svg
+.. |gwb_badge| image:: https://github.com/sepal-contrib/gwb/actions/workflows/ci.yaml/badge.svg
    :alt: build
-.. _gwb_badge: https://github.com/sepal-contrib/gwb/actions/workflows/unit.yaml
+.. _gwb_badge: https://github.com/sepal-contrib/gwb/actions/workflows/ci.yaml
 
-.. |cumsum_change_badge| image:: https://github.com/sepal-contrib/cumsum_change/actions/workflows/unit.yaml/badge.svg
+.. |cumsum_change_badge| image:: https://github.com/sepal-contrib/cumsum_change/actions/workflows/ci.yaml/badge.svg
    :alt: build
-.. _cumsum_change_badge: https://github.com/sepal-contrib/cumsum_change/actions/workflows/unit.yaml
+.. _cumsum_change_badge: https://github.com/sepal-contrib/cumsum_change/actions/workflows/ci.yaml
 
-.. |weplan_badge| image:: https://github.com/sepal-contrib/weplan/actions/workflows/unit.yaml/badge.svg
+.. |weplan_badge| image:: https://github.com/sepal-contrib/weplan/actions/workflows/ci.yaml/badge.svg
    :alt: build
-.. _weplan_badge: https://github.com/sepal-contrib/weplan/actions/workflows/unit.yaml
+.. _weplan_badge: https://github.com/sepal-contrib/weplan/actions/workflows/ci.yaml
 
-.. |sepal_leafmap_badge| image:: https://github.com/sepal-contrib/sepal-leafmap/actions/workflows/unit.yaml/badge.svg
+.. |sepal_leafmap_badge| image:: https://github.com/sepal-contrib/sepal-leafmap/actions/workflows/ci.yaml/badge.svg
    :alt: build
-.. _sepal_leafmap_badge: https://github.com/sepal-contrib/sepal-leafmap/actions/workflows/unit.yaml
+.. _sepal_leafmap_badge: https://github.com/sepal-contrib/sepal-leafmap/actions/workflows/ci.yaml
 
 .. |eSBAE_notebooks_badge| image:: https://github.com/sepal-contrib/eSBAE_notebooks/actions/workflows/unit.yaml/badge.svg
    :alt: build
 .. _eSBAE_notebooks_badge: https://github.com/sepal-contrib/eSBAE_notebooks/actions/workflows/unit.yaml
 
-.. |deforestation_alerts_badge| image:: https://github.com/sepal-contrib/deforestation-alerts-module/actions/workflows/unit.yaml/badge.svg
+.. |deforestation_alerts_badge| image:: https://github.com/sepal-contrib/deforestation-alerts-module/actions/workflows/ci.yaml/badge.svg
    :alt: build
-.. _deforestation_alerts_badge: https://github.com/sepal-contrib/deforestation-alerts-module/actions/workflows/unit.yaml
+.. _deforestation_alerts_badge: https://github.com/sepal-contrib/deforestation-alerts-module/actions/workflows/ci.yaml
 
 .. |sbae_design_badge| image:: https://github.com/sepal-contrib/sbae-design/actions/workflows/unit.yaml/badge.svg
    :alt: build
