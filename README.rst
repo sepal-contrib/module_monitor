@@ -16,11 +16,11 @@ Solara Modules
 +----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+
 | #  | Module name                 | Status                                                                                               | prod | test |
 +====+=============================+======================================================================================================+======+======+
-| 1  | `se.plan`_                  | |se_plan_unit_badge|_                                                                                | ✓    | ✓    |
+| 1  | `se.plan`_                  |                                                                                                      | ✓    | ✓    |
 |    |                             |                                                                                                      |      |      |
 |    |                             |                                                                                                      |      |      |
 +----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+
-| 2  | `sepal_mgci`_               | |sepal_mgci_unit_badge|_                                                                             | ✓    | ✓    |
+| 2  | `sepal_mgci`_               |                                                                                                      | ✓    | ✓    |
 |    |                             |                                                                                                      |      |      |
 |    |                             |                                                                                                      |      |      |
 +----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+
@@ -60,7 +60,7 @@ Jupyter/Conda Modules
 +----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+-----------+-------------------------------------+
 | 14 | `sepal_smfm_biota`_         | |sepal_smfm_biota_ci_badge|_                                                                         | ✓    | ✓    | yes       |                                     |
 +----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+-----------+-------------------------------------+
-| 15 | `smfm_deforest`_            | |smfm_deforest_unit_badge|_                                                                          | ✓    | ✓    | yes       | external repo, not cloned locally   |
+| 15 | `smfm_deforest`_            |                                                                                                      | ✓    | ✓    | yes       | external repo, not cloned locally   |
 +----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+-----------+-------------------------------------+
 | 16 | `gwb`_                      | |gwb_ci_badge|_                                                                                      | ✓    | ✓    | yes       |                                     |
 +----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+-----------+-------------------------------------+
@@ -70,7 +70,7 @@ Jupyter/Conda Modules
 +----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+-----------+-------------------------------------+
 | 19 | `sepal-leafmap`_            | |sepal_leafmap_ci_badge|_                                                                            | ○    | ✓    | yes       |                                     |
 +----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+-----------+-------------------------------------+
-| 20 | `eSBAE_notebooks`_          | |eSBAE_notebooks_unit_badge|_                                                                        | ○    | ✓    |           | notebooks, not a standard module    |
+| 20 | `eSBAE_notebooks`_          |                                                                                                      | ○    | ✓    |           | notebooks, not a standard module    |
 +----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+-----------+-------------------------------------+
 | 21 | `deforestation-alerts`_     | |deforestation_alerts_ci_badge|_                                                                     | ✓    | ✓    | yes       |                                     |
 +----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+-----------+-------------------------------------+
@@ -84,11 +84,11 @@ Legacy Modules (not in prod/test)
 +----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+-----------+-------------------------------------+
 | #  | Module name                 | Status                                                                                               | prod | test | conda env | comments                            |
 +====+=============================+======================================================================================================+======+======+===========+=====================================+
-| 1  | `alert_module`_             | |alert_module_unit_badge|_                                                                           |      |      | yes       |                                     |
+| 1  | `alert_module`_             |                                                                                                      |      |      | yes       |                                     |
 +----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+-----------+-------------------------------------+
-| 2  | `damage_proxy_maps`_        | |damage_proxy_maps_unit_badge|_                                                                      | ○    | ○    | yes       |                                     |
+| 2  | `damage_proxy_maps`_        |                                                                                                      | ○    | ○    | yes       |                                     |
 +----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+-----------+-------------------------------------+
-| 3  | `bfast_gpu`_                | |bfast_gpu_unit_badge|_                                                                              |      |      | yes       |                                     |
+| 3  | `bfast_gpu`_                |                                                                                                      |      |      | yes       |                                     |
 +----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+-----------+-------------------------------------+
 
 
@@ -166,14 +166,6 @@ Modules are grouped into categories, each with its own table columns.
    :alt: unit.yml
 .. _sepal_ui_unit_badge: https://github.com/openforis/sepal_ui/actions/workflows/unit.yml
 
-.. |se_plan_unit_badge| image:: https://github.com/sepal-contrib/se.plan/actions/workflows/unit.yaml/badge.svg
-   :alt: unit.yaml
-.. _se_plan_unit_badge: https://github.com/sepal-contrib/se.plan/actions/workflows/unit.yaml
-
-.. |sepal_mgci_unit_badge| image:: https://github.com/sepal-contrib/sepal_mgci/actions/workflows/unit.yaml/badge.svg
-   :alt: unit.yaml
-.. _sepal_mgci_unit_badge: https://github.com/sepal-contrib/sepal_mgci/actions/workflows/unit.yaml
-
 .. |sepal_pysmm_ci_badge| image:: https://github.com/sepal-contrib/sepal_pysmm/actions/workflows/ci.yaml/badge.svg
    :alt: ci.yaml
 .. _sepal_pysmm_ci_badge: https://github.com/sepal-contrib/sepal_pysmm/actions/workflows/ci.yaml
@@ -230,10 +222,6 @@ Modules are grouped into categories, each with its own table columns.
    :alt: ci.yaml
 .. _sepal_smfm_biota_ci_badge: https://github.com/sepal-contrib/sepal_smfm_biota/actions/workflows/ci.yaml
 
-.. |smfm_deforest_unit_badge| image:: https://github.com/smfm-project/deforest/actions/workflows/unit.yaml/badge.svg
-   :alt: unit.yaml
-.. _smfm_deforest_unit_badge: https://github.com/smfm-project/deforest/actions/workflows/unit.yaml
-
 .. |gwb_ci_badge| image:: https://github.com/sepal-contrib/gwb/actions/workflows/ci.yaml/badge.svg
    :alt: ci.yaml
 .. _gwb_ci_badge: https://github.com/sepal-contrib/gwb/actions/workflows/ci.yaml
@@ -250,10 +238,6 @@ Modules are grouped into categories, each with its own table columns.
    :alt: ci.yaml
 .. _sepal_leafmap_ci_badge: https://github.com/sepal-contrib/sepal-leafmap/actions/workflows/ci.yaml
 
-.. |eSBAE_notebooks_unit_badge| image:: https://github.com/sepal-contrib/eSBAE_notebooks/actions/workflows/unit.yaml/badge.svg
-   :alt: unit.yaml
-.. _eSBAE_notebooks_unit_badge: https://github.com/sepal-contrib/eSBAE_notebooks/actions/workflows/unit.yaml
-
 .. |deforestation_alerts_ci_badge| image:: https://github.com/sepal-contrib/deforestation-alerts-module/actions/workflows/ci.yaml/badge.svg
    :alt: ci.yaml
 .. _deforestation_alerts_ci_badge: https://github.com/sepal-contrib/deforestation-alerts-module/actions/workflows/ci.yaml
@@ -265,16 +249,4 @@ Modules are grouped into categories, each with its own table columns.
 .. |sbae_design_unit_badge| image:: https://github.com/sepal-contrib/sbae-design/actions/workflows/unit.yaml/badge.svg
    :alt: unit.yaml
 .. _sbae_design_unit_badge: https://github.com/sepal-contrib/sbae-design/actions/workflows/unit.yaml
-
-.. |alert_module_unit_badge| image:: https://github.com/sepal-contrib/alert_module/actions/workflows/unit.yaml/badge.svg
-   :alt: unit.yaml
-.. _alert_module_unit_badge: https://github.com/sepal-contrib/alert_module/actions/workflows/unit.yaml
-
-.. |damage_proxy_maps_unit_badge| image:: https://github.com/sepal-contrib/damage_proxy_maps/actions/workflows/unit.yaml/badge.svg
-   :alt: unit.yaml
-.. _damage_proxy_maps_unit_badge: https://github.com/sepal-contrib/damage_proxy_maps/actions/workflows/unit.yaml
-
-.. |bfast_gpu_unit_badge| image:: https://github.com/sepal-contrib/bfast_gpu/actions/workflows/unit.yaml/badge.svg
-   :alt: unit.yaml
-.. _bfast_gpu_unit_badge: https://github.com/sepal-contrib/bfast_gpu/actions/workflows/unit.yaml
 

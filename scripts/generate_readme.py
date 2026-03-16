@@ -23,7 +23,7 @@ def get_workflows(mod: dict) -> list[str]:
         return [mod["badge_workflow"]]
     if mod.get("ci") and not mod["ci"].get("skip"):
         return ["ci.yaml"]
-    return ["unit.yaml"]
+    return []
 
 
 def pad(value, width: int) -> str:
