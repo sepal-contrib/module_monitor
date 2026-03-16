@@ -477,7 +477,7 @@
           "name": "weplan",
           "github_url": "https://github.com/sepal-contrib/weplan",
           "conda_env": "yes",
-          "comments": "only in test server",
+          "comments": "only in prod server",
           "local_dir": "weplan",
           "migration": {
             "status": "audited",
@@ -572,6 +572,7 @@
         {
           "name": "sbae-design",
           "github_url": "https://github.com/sepal-contrib/sbae-design",
+          "badge_workflows": ["ci.yaml", "unit.yaml"],
           "conda_env": "yes",
           "comments": "reference Solara implementation",
           "local_dir": "sbae-design",

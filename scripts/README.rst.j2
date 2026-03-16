@@ -13,7 +13,7 @@
 {{ headsep }}
 {% for mod in cat.modules -%}
 {% set name_cell = "`" ~ mod.name ~ "`_" -%}
-{% set badge_cell = "|" ~ badge_ref(mod.name) ~ "|_" -%}
+{% set badge_cell = badge_cells(mod) -%}
 {% set prod_cell = server_icon(mod, "on_prod") -%}
 {% set test_cell = server_icon(mod, "on_test") -%}
 | {{ loop.index | string | pad(2) }} | {{ name_cell | pad(27) }} | {{ badge_cell | pad(100) }} | {{ prod_cell | pad(4) }} | {{ test_cell | pad(4) }} |
@@ -29,7 +29,7 @@
 {{ headsep }}
 {% for mod in cat.modules -%}
 {% set name_cell = "`" ~ mod.name ~ "`_" -%}
-{% set badge_cell = "|" ~ badge_ref(mod.name) ~ "|_" -%}
+{% set badge_cell = badge_cells(mod) -%}
 {% set prod_cell = server_icon(mod, "on_prod") -%}
 {% set test_cell = server_icon(mod, "on_test") -%}
 {% set conda_cell = mod.get("conda_env", "") -%}
@@ -85,9 +85,10 @@ Modules are grouped into categories, each with its own table columns.
 .. _{{ mod.name }}: {{ mod.github_url }}
 {% endfor %}
 {% for mod in all_modules -%}
-.. |{{ badge_ref(mod.name) }}| image:: {{ mod.github_url }}/actions/workflows/{{ get_workflow(mod) }}/badge.svg
-   :alt: build
-.. _{{ badge_ref(mod.name) }}: {{ mod.github_url }}/actions/workflows/{{ get_workflow(mod) }}
-{% if not loop.last %}
-{% endif -%}
+{% for wf in get_workflows(mod) -%}
+.. |{{ badge_ref(mod.name, wf) }}| image:: {{ mod.github_url }}/actions/workflows/{{ wf }}/badge.svg
+   :alt: {{ wf }}
+.. _{{ badge_ref(mod.name, wf) }}: {{ mod.github_url }}/actions/workflows/{{ wf }}
+
+{% endfor -%}
 {% endfor -%}
