@@ -59,7 +59,14 @@
             "merge_target": null,
             "blockers": [],
             "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+            "last_session_summary": "Initial audit — CLAUDE.md created"
+          },
+          "ci": {
+            "secrets": [
+              "EARTHENGINE_TOKEN"
+            ],
+            "notebook": "ui.ipynb",
+            "skip": false
           }
         },
         {
@@ -75,7 +82,14 @@
             "merge_target": null,
             "blockers": [],
             "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+            "last_session_summary": "Initial audit — CLAUDE.md created"
+          },
+          "ci": {
+            "secrets": [
+              "EARTHENGINE_TOKEN"
+            ],
+            "notebook": "ui.ipynb",
+            "skip": false
           }
         },
         {
@@ -91,7 +105,14 @@
             "merge_target": null,
             "blockers": [],
             "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+            "last_session_summary": "Initial audit — CLAUDE.md created"
+          },
+          "ci": {
+            "secrets": [
+              "EARTHENGINE_TOKEN"
+            ],
+            "notebook": "ui.ipynb",
+            "skip": false
           }
         },
         {
@@ -107,7 +128,15 @@
             "merge_target": null,
             "blockers": [],
             "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+            "last_session_summary": "Initial audit — CLAUDE.md created"
+          },
+          "ci": {
+            "secrets": [
+              "EARTHENGINE_TOKEN",
+              "PLANET_API_KEY"
+            ],
+            "notebook": "ui.ipynb",
+            "skip": false
           }
         },
         {
@@ -123,7 +152,14 @@
             "merge_target": null,
             "blockers": [],
             "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+            "last_session_summary": "Initial audit — CLAUDE.md created"
+          },
+          "ci": {
+            "secrets": [
+              "EARTHENGINE_TOKEN"
+            ],
+            "notebook": "ui.ipynb",
+            "skip": false
           }
         },
         {
@@ -139,7 +175,14 @@
             "merge_target": null,
             "blockers": [],
             "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+            "last_session_summary": "Initial audit — CLAUDE.md created"
+          },
+          "ci": {
+            "secrets": [
+              "EARTHENGINE_TOKEN"
+            ],
+            "notebook": "ui.ipynb",
+            "skip": false
           }
         },
         {
@@ -155,7 +198,14 @@
             "merge_target": null,
             "blockers": [],
             "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+            "last_session_summary": "Initial audit — CLAUDE.md created"
+          },
+          "ci": {
+            "secrets": [
+              "EARTHENGINE_TOKEN"
+            ],
+            "notebook": "ui.ipynb",
+            "skip": false
           }
         },
         {
@@ -171,7 +221,15 @@
             "merge_target": null,
             "blockers": [],
             "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+            "last_session_summary": "Initial audit — CLAUDE.md created"
+          },
+          "ci": {
+            "secrets": [
+              "EARTHENGINE_TOKEN",
+              "PLANET_API_KEY"
+            ],
+            "notebook": "ui.ipynb",
+            "skip": false
           }
         },
         {
@@ -187,7 +245,14 @@
             "merge_target": null,
             "blockers": [],
             "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+            "last_session_summary": "Initial audit — CLAUDE.md created"
+          },
+          "ci": {
+            "secrets": [
+              "EARTHENGINE_TOKEN"
+            ],
+            "notebook": "ui.ipynb",
+            "skip": false
           }
         },
         {
@@ -203,7 +268,14 @@
             "merge_target": null,
             "blockers": [],
             "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+            "last_session_summary": "Initial audit — CLAUDE.md created"
+          },
+          "ci": {
+            "secrets": [
+              "EARTHENGINE_TOKEN"
+            ],
+            "notebook": "ui.ipynb",
+            "skip": false
           }
         },
         {
@@ -219,7 +291,14 @@
             "merge_target": null,
             "blockers": [],
             "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+            "last_session_summary": "Initial audit — CLAUDE.md created"
+          },
+          "ci": {
+            "secrets": [
+              "EARTHENGINE_TOKEN"
+            ],
+            "notebook": "ui.ipynb",
+            "skip": false
           }
         },
         {
@@ -235,7 +314,14 @@
             "merge_target": null,
             "blockers": [],
             "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+            "last_session_summary": "Initial audit — CLAUDE.md created"
+          },
+          "ci": {
+            "secrets": [
+              "EARTHENGINE_TOKEN"
+            ],
+            "notebook": "ui.ipynb",
+            "skip": false
           }
         },
         {
@@ -251,7 +337,15 @@
             "merge_target": null,
             "blockers": [],
             "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+            "last_session_summary": "Initial audit — CLAUDE.md created"
+          },
+          "ci": {
+            "secrets": [
+              "EARTHENGINE_TOKEN",
+              "PLANET_API_KEY"
+            ],
+            "notebook": "ui.ipynb",
+            "skip": false
           }
         },
         {
@@ -267,7 +361,14 @@
             "merge_target": null,
             "blockers": [],
             "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+            "last_session_summary": "Initial audit — CLAUDE.md created"
+          },
+          "ci": {
+            "secrets": [
+              "EARTHENGINE_TOKEN"
+            ],
+            "notebook": "ui.ipynb",
+            "skip": false
           }
         },
         {
@@ -282,7 +383,7 @@
             "merge_candidate": null,
             "merge_target": null,
             "blockers": [
-              "external repo \u2014 not under sepal-contrib"
+              "external repo — not under sepal-contrib"
             ],
             "last_session_date": null,
             "last_session_summary": null
@@ -301,7 +402,12 @@
             "merge_target": null,
             "blockers": [],
             "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+            "last_session_summary": "Initial audit — CLAUDE.md created"
+          },
+          "ci": {
+            "secrets": [],
+            "notebook": "ui.ipynb",
+            "skip": false
           }
         },
         {
@@ -317,7 +423,14 @@
             "merge_target": null,
             "blockers": [],
             "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+            "last_session_summary": "Initial audit — CLAUDE.md created"
+          },
+          "ci": {
+            "secrets": [
+              "EARTHENGINE_TOKEN"
+            ],
+            "notebook": "ui.ipynb",
+            "skip": false
           }
         },
         {
@@ -333,7 +446,14 @@
             "merge_target": null,
             "blockers": [],
             "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+            "last_session_summary": "Initial audit — CLAUDE.md created"
+          },
+          "ci": {
+            "secrets": [
+              "EARTHENGINE_TOKEN"
+            ],
+            "notebook": "ui.ipynb",
+            "skip": false
           }
         },
         {
@@ -349,7 +469,12 @@
             "merge_target": null,
             "blockers": [],
             "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+            "last_session_summary": "Initial audit — CLAUDE.md created"
+          },
+          "ci": {
+            "secrets": [],
+            "notebook": "ui.ipynb",
+            "skip": false
           }
         },
         {
@@ -365,7 +490,12 @@
             "merge_target": null,
             "blockers": [],
             "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+            "last_session_summary": "Initial audit — CLAUDE.md created"
+          },
+          "ci": {
+            "secrets": [],
+            "notebook": "ui.ipynb",
+            "skip": true
           }
         },
         {
@@ -381,7 +511,14 @@
             "merge_target": null,
             "blockers": [],
             "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+            "last_session_summary": "Initial audit — CLAUDE.md created"
+          },
+          "ci": {
+            "secrets": [
+              "EARTHENGINE_TOKEN"
+            ],
+            "notebook": "ui.ipynb",
+            "skip": false
           }
         },
         {
@@ -397,7 +534,7 @@
             "merge_target": null,
             "blockers": [],
             "last_session_date": null,
-            "last_session_summary": "Already a pure Solara app \u2014 serves as reference architecture"
+            "last_session_summary": "Already a pure Solara app — serves as reference architecture"
           }
         }
       ]
