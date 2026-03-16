@@ -25,6 +25,17 @@ def pad(value, width: int) -> str:
     return str(value).ljust(width)
 
 
+_SERVER_ICONS = {"active": "\u2713", "hidden": "\u25cb"}
+
+
+def server_icon(mod: dict, key: str) -> str:
+    """Return an icon for the module's deployment status on a server.
+
+    ✓ = active, ○ = hidden, (blank) = missing.
+    """
+    return _SERVER_ICONS.get(mod.get(key, ""), "")
+
+
 def main():
     scripts_dir = Path(__file__).parent
     project_root = scripts_dir.parent
@@ -45,6 +56,7 @@ def main():
     env.filters["pad"] = pad
     env.globals["badge_ref"] = badge_ref
     env.globals["get_workflow"] = get_workflow
+    env.globals["server_icon"] = server_icon
 
     template = env.get_template("README.rst.j2")
     output = template.render(categories=data["categories"], all_modules=all_modules)

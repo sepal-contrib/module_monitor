@@ -12,7 +12,9 @@
           "name": "sepal_ui",
           "github_url": "https://github.com/openforis/sepal_ui",
           "badge_workflow": "unit.yml",
-          "local_dir": "sepal_ui"
+          "local_dir": "sepal_ui",
+          "on_prod": "missing",
+          "on_test": "missing"
         }
       ]
     },
@@ -27,12 +29,16 @@
         {
           "name": "se.plan",
           "github_url": "https://github.com/sepal-contrib/se.plan",
-          "local_dir": "se.plan"
+          "local_dir": "se.plan",
+          "on_prod": "active",
+          "on_test": "active"
         },
         {
           "name": "sepal_mgci",
           "github_url": "https://github.com/sepal-contrib/sepal_mgci",
-          "local_dir": "sepal_mgci"
+          "local_dir": "sepal_mgci",
+          "on_prod": "active",
+          "on_test": "active"
         }
       ]
     },
@@ -59,7 +65,7 @@
             "merge_target": null,
             "blockers": [],
             "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit — CLAUDE.md created"
+            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
           },
           "ci": {
             "secrets": [
@@ -67,7 +73,9 @@
             ],
             "notebook": "ui.ipynb",
             "skip": false
-          }
+          },
+          "on_prod": "active",
+          "on_test": "active"
         },
         {
           "name": "gfc_wrapper_python",
@@ -82,7 +90,7 @@
             "merge_target": null,
             "blockers": [],
             "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit — CLAUDE.md created"
+            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
           },
           "ci": {
             "secrets": [
@@ -90,7 +98,9 @@
             ],
             "notebook": "ui.ipynb",
             "skip": false
-          }
+          },
+          "on_prod": "active",
+          "on_test": "active"
         },
         {
           "name": "vector_manager",
@@ -105,7 +115,7 @@
             "merge_target": null,
             "blockers": [],
             "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit — CLAUDE.md created"
+            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
           },
           "ci": {
             "secrets": [
@@ -113,7 +123,9 @@
             ],
             "notebook": "ui.ipynb",
             "skip": false
-          }
+          },
+          "on_prod": "active",
+          "on_test": "active"
         },
         {
           "name": "clip-time-series",
@@ -128,7 +140,7 @@
             "merge_target": null,
             "blockers": [],
             "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit — CLAUDE.md created"
+            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
           },
           "ci": {
             "secrets": [
@@ -137,7 +149,9 @@
             ],
             "notebook": "ui.ipynb",
             "skip": false
-          }
+          },
+          "on_prod": "active",
+          "on_test": "active"
         },
         {
           "name": "alos_mosaics",
@@ -152,7 +166,7 @@
             "merge_target": null,
             "blockers": [],
             "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit — CLAUDE.md created"
+            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
           },
           "ci": {
             "secrets": [
@@ -160,7 +174,9 @@
             ],
             "notebook": "ui.ipynb",
             "skip": false
-          }
+          },
+          "on_prod": "active",
+          "on_test": "active"
         },
         {
           "name": "sdg_15.3.1",
@@ -175,7 +191,7 @@
             "merge_target": null,
             "blockers": [],
             "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit — CLAUDE.md created"
+            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
           },
           "ci": {
             "secrets": [
@@ -183,7 +199,9 @@
             ],
             "notebook": "ui.ipynb",
             "skip": false
-          }
+          },
+          "on_prod": "active",
+          "on_test": "active"
         },
         {
           "name": "tmf_sepal",
@@ -198,7 +216,7 @@
             "merge_target": null,
             "blockers": [],
             "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit — CLAUDE.md created"
+            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
           },
           "ci": {
             "secrets": [
@@ -206,7 +224,9 @@
             ],
             "notebook": "ui.ipynb",
             "skip": false
-          }
+          },
+          "on_prod": "active",
+          "on_test": "active"
         },
         {
           "name": "planet-order",
@@ -221,7 +241,7 @@
             "merge_target": null,
             "blockers": [],
             "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit — CLAUDE.md created"
+            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
           },
           "ci": {
             "secrets": [
@@ -230,7 +250,9 @@
             ],
             "notebook": "ui.ipynb",
             "skip": false
-          }
+          },
+          "on_prod": "active",
+          "on_test": "active"
         },
         {
           "name": "coverage_analysis",
@@ -245,7 +267,7 @@
             "merge_target": null,
             "blockers": [],
             "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit — CLAUDE.md created"
+            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
           },
           "ci": {
             "secrets": [
@@ -253,7 +275,9 @@
             ],
             "notebook": "ui.ipynb",
             "skip": false
-          }
+          },
+          "on_prod": "active",
+          "on_test": "active"
         },
         {
           "name": "fcdm",
@@ -268,7 +292,7 @@
             "merge_target": null,
             "blockers": [],
             "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit — CLAUDE.md created"
+            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
           },
           "ci": {
             "secrets": [
@@ -276,7 +300,9 @@
             ],
             "notebook": "ui.ipynb",
             "skip": false
-          }
+          },
+          "on_prod": "active",
+          "on_test": "active"
         },
         {
           "name": "basin-rivers",
@@ -291,7 +317,7 @@
             "merge_target": null,
             "blockers": [],
             "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit — CLAUDE.md created"
+            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
           },
           "ci": {
             "secrets": [
@@ -299,7 +325,9 @@
             ],
             "notebook": "ui.ipynb",
             "skip": false
-          }
+          },
+          "on_prod": "active",
+          "on_test": "active"
         },
         {
           "name": "gee_source",
@@ -314,7 +342,7 @@
             "merge_target": null,
             "blockers": [],
             "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit — CLAUDE.md created"
+            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
           },
           "ci": {
             "secrets": [
@@ -322,7 +350,9 @@
             ],
             "notebook": "ui.ipynb",
             "skip": false
-          }
+          },
+          "on_prod": "active",
+          "on_test": "active"
         },
         {
           "name": "active_fires_explorer",
@@ -337,7 +367,7 @@
             "merge_target": null,
             "blockers": [],
             "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit — CLAUDE.md created"
+            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
           },
           "ci": {
             "secrets": [
@@ -346,7 +376,9 @@
             ],
             "notebook": "ui.ipynb",
             "skip": false
-          }
+          },
+          "on_prod": "active",
+          "on_test": "active"
         },
         {
           "name": "sepal_smfm_biota",
@@ -361,7 +393,7 @@
             "merge_target": null,
             "blockers": [],
             "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit — CLAUDE.md created"
+            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
           },
           "ci": {
             "secrets": [
@@ -369,7 +401,9 @@
             ],
             "notebook": "ui.ipynb",
             "skip": false
-          }
+          },
+          "on_prod": "active",
+          "on_test": "active"
         },
         {
           "name": "smfm_deforest",
@@ -383,11 +417,13 @@
             "merge_candidate": null,
             "merge_target": null,
             "blockers": [
-              "external repo — not under sepal-contrib"
+              "external repo \u2014 not under sepal-contrib"
             ],
             "last_session_date": null,
             "last_session_summary": null
-          }
+          },
+          "on_prod": "active",
+          "on_test": "active"
         },
         {
           "name": "gwb",
@@ -402,13 +438,15 @@
             "merge_target": null,
             "blockers": [],
             "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit — CLAUDE.md created"
+            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
           },
           "ci": {
             "secrets": [],
             "notebook": "ui.ipynb",
             "skip": false
-          }
+          },
+          "on_prod": "active",
+          "on_test": "active"
         },
         {
           "name": "cumsum_change",
@@ -423,7 +461,7 @@
             "merge_target": null,
             "blockers": [],
             "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit — CLAUDE.md created"
+            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
           },
           "ci": {
             "secrets": [
@@ -431,7 +469,9 @@
             ],
             "notebook": "ui.ipynb",
             "skip": false
-          }
+          },
+          "on_prod": "active",
+          "on_test": "active"
         },
         {
           "name": "weplan",
@@ -446,7 +486,7 @@
             "merge_target": null,
             "blockers": [],
             "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit — CLAUDE.md created"
+            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
           },
           "ci": {
             "secrets": [
@@ -454,7 +494,9 @@
             ],
             "notebook": "ui.ipynb",
             "skip": false
-          }
+          },
+          "on_prod": "active",
+          "on_test": "missing"
         },
         {
           "name": "sepal-leafmap",
@@ -469,13 +511,15 @@
             "merge_target": null,
             "blockers": [],
             "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit — CLAUDE.md created"
+            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
           },
           "ci": {
             "secrets": [],
             "notebook": "ui.ipynb",
             "skip": false
-          }
+          },
+          "on_prod": "hidden",
+          "on_test": "active"
         },
         {
           "name": "eSBAE_notebooks",
@@ -490,13 +534,15 @@
             "merge_target": null,
             "blockers": [],
             "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit — CLAUDE.md created"
+            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
           },
           "ci": {
             "secrets": [],
             "notebook": "ui.ipynb",
             "skip": true
-          }
+          },
+          "on_prod": "hidden",
+          "on_test": "active"
         },
         {
           "name": "deforestation-alerts",
@@ -511,7 +557,7 @@
             "merge_target": null,
             "blockers": [],
             "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit — CLAUDE.md created"
+            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
           },
           "ci": {
             "secrets": [
@@ -519,7 +565,9 @@
             ],
             "notebook": "ui.ipynb",
             "skip": false
-          }
+          },
+          "on_prod": "active",
+          "on_test": "active"
         },
         {
           "name": "sbae-design",
@@ -534,8 +582,10 @@
             "merge_target": null,
             "blockers": [],
             "last_session_date": null,
-            "last_session_summary": "Already a pure Solara app — serves as reference architecture"
-          }
+            "last_session_summary": "Already a pure Solara app \u2014 serves as reference architecture"
+          },
+          "on_prod": "active",
+          "on_test": "active"
         }
       ]
     },
@@ -553,19 +603,25 @@
           "name": "alert_module",
           "github_url": "https://github.com/sepal-contrib/alert_module",
           "conda_env": "yes",
-          "comments": ""
+          "comments": "",
+          "on_prod": "missing",
+          "on_test": "missing"
         },
         {
           "name": "damage_proxy_maps",
           "github_url": "https://github.com/sepal-contrib/damage_proxy_maps",
           "conda_env": "yes",
-          "comments": ""
+          "comments": "",
+          "on_prod": "hidden",
+          "on_test": "hidden"
         },
         {
           "name": "bfast_gpu",
           "github_url": "https://github.com/sepal-contrib/bfast_gpu",
           "conda_env": "yes",
-          "comments": ""
+          "comments": "",
+          "on_prod": "missing",
+          "on_test": "missing"
         }
       ]
     }
