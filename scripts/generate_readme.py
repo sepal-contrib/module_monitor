@@ -6,18 +6,24 @@ from pathlib import Path
 from jinja2 import Environment, FileSystemLoader
 
 
-def badge_ref(name: str) -> str:
+def badge_ref(name: str, workflow: str = "") -> str:
     """Convert module name to badge reference name."""
-    return name.replace("-", "_").replace(".", "_") + "_badge"
+    base = name.replace("-", "_").replace(".", "_")
+    if workflow:
+        suffix = workflow.replace(".yaml", "").replace(".yml", "")
+        return f"{base}_{suffix}_badge"
+    return f"{base}_badge"
 
 
-def get_workflow(mod: dict) -> str:
-    """Get the workflow filename for a module."""
+def get_workflows(mod: dict) -> list[str]:
+    """Get the workflow filenames for a module."""
+    if mod.get("badge_workflows"):
+        return mod["badge_workflows"]
     if mod.get("badge_workflow"):
-        return mod["badge_workflow"]
+        return [mod["badge_workflow"]]
     if mod.get("ci") and not mod["ci"].get("skip"):
-        return "ci.yaml"
-    return "unit.yaml"
+        return ["ci.yaml"]
+    return ["unit.yaml"]
 
 
 def pad(value, width: int) -> str:
@@ -26,6 +32,13 @@ def pad(value, width: int) -> str:
 
 
 _SERVER_ICONS = {"active": "\u2713", "hidden": "\u25cb"}
+
+
+def badge_cells(mod: dict) -> str:
+    """Return RST badge references for all workflows of a module."""
+    workflows = get_workflows(mod)
+    parts = [f"|{badge_ref(mod['name'], wf)}|_" for wf in workflows]
+    return "  ".join(parts)
 
 
 def server_icon(mod: dict, key: str) -> str:
@@ -55,7 +68,8 @@ def main():
     env.filters["badge_ref"] = badge_ref
     env.filters["pad"] = pad
     env.globals["badge_ref"] = badge_ref
-    env.globals["get_workflow"] = get_workflow
+    env.globals["get_workflows"] = get_workflows
+    env.globals["badge_cells"] = badge_cells
     env.globals["server_icon"] = server_icon
 
     template = env.get_template("README.rst.j2")
