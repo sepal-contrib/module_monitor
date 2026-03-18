@@ -155,3 +155,13 @@ All repos are cloned at `/home/dguerrero/1_modules/`. Each migrating module has 
 - `deforestation-alerts-module/` — deforestation-alerts (audited)
 - `sbae-design/` — sbae-design (done)
 
+
+## Operations Skills
+
+Three Claude Code skills are available for SEPAL operations:
+
+- `/sepal-connect` — Authenticate to a SEPAL instance (local/test/prod)
+- `/sepal-terminal` — Run SSH commands on a SEPAL sandbox
+- `/sepal-monitor` — Health checks and app smoke tests
+
+Future extensions: task triggering, log analysis, deployment verification, automated migration smoke tests.
