@@ -23,6 +23,13 @@ jobs:
         with:
           environment-file: sepal_environment.yml
           cache-environment: true
+{%- if ee_fork_version %}
+
+      - name: Verify ee-api fork
+        shell: micromamba-shell {0}
+        run: |
+          python -c "import ee; v=ee.__version__; print('ee-api:', v); assert v == '{{ ee_fork_version }}', 'Expected fork {{ ee_fork_version }}, got ' + v"
+{%- endif %}
 
       - name: Install test deps
         shell: micromamba-shell {0}

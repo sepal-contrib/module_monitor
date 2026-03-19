@@ -60,6 +60,7 @@ def main():
         rendered = template.render(
             notebook=ci.get("notebook", "ui.ipynb"),
             secrets=ci.get("secrets", []),
+            ee_fork_version=ci.get("ee_fork_version", ""),
         )
 
         # Write to repo
