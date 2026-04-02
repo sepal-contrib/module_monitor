@@ -69,6 +69,56 @@ Key patterns:
 - **Components**: `component/{config,model,tile,widget,scripts}/`
 - **Dev server**: `solara run app.py --port 8901`
 
+## Orchestration Rules
+
+You are the **orchestrator**. You do not write code directly in module repos.
+
+- For any task in a module repo (bug fixes, feature work, migration steps), **spawn a subagent** pointing to that repo's directory.
+- Pass the repo path, the relevant CLAUDE.md context, and a clear task description to the agent.
+- Review the agent's output and report back to the user.
+- Only act directly in `module_monitor/` itself (status updates, template edits, regeneration).
+
+### Agent instructions (include in every subagent prompt)
+
+Every agent spawned for a module repo **must**:
+
+1. **Open a new tmux pane** (split in the current window) for its work:
+   ```bash
+   tmux split-window -h
+   ```
+
+2. **Activate or create the conda environment** for the module:
+   ```bash
+   # Activate if it exists
+   conda activate {module_name}
+   # Or create from sepal_environment.yml if it doesn't exist
+   conda env create -n {module_name} -f sepal_environment.yml
+   conda activate {module_name}
+   ```
+
+3. **Run voila locally** in that new pane so the user can test:
+   ```bash
+   tmux split-window -h "conda activate {module_name} && cd /path/to/repo && voila ui.ipynb"
+   ```
+   Report the local URL (default: `http://localhost:8866`) to the user.
+
+4. Keep all code changes on a feature branch (never `main` or `release` directly).
+
+5. Never push — leave that to the orchestrator.
+
+## Git Safety Rules
+
+**Always check the current branch before any `git commit` or `git push`.**
+
+```bash
+git branch --show-current
+```
+
+- **Never commit directly to `release`** — always work on a feature/fix branch and open a PR to `main`.
+- **Never push unless the user explicitly says to.**
+- PRs target `main` by default. PRs targeting `release` require explicit user instruction.
+- **Never include `Co-Authored-By` trailers** (or any AI authorship attribution) in commit messages. These are forked community repos — commits must look like standard human contributions.
+
 ## Workflow: Migrating a Module
 
 ### 1. Pick next module

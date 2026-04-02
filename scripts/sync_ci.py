@@ -56,11 +56,17 @@ def main():
             skipped.append((name, f"status={migration['status']}"))
             continue
 
+        # Derive expected kernel name from GitHub repo name
+        github_url = mod.get("github_url", "")
+        repo_name = github_url.rstrip("/").split("/")[-1] if github_url else ""
+        expected_kernel = f"venv-{repo_name}" if repo_name else ""
+
         # Render template
         rendered = template.render(
             notebook=ci.get("notebook", "ui.ipynb"),
             secrets=ci.get("secrets", []),
             ee_fork_version=ci.get("ee_fork_version", ""),
+            expected_kernel=expected_kernel,
         )
 
         # Write to repo

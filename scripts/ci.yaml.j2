@@ -30,6 +30,19 @@ jobs:
         run: |
           python -c "import ee; v=ee.__version__; print('ee-api:', v); assert v == '{{ ee_fork_version }}', 'Expected fork {{ ee_fork_version }}, got ' + v"
 {%- endif %}
+{%- if expected_kernel %}
+
+      - name: Verify notebook kernelspec
+        run: |
+          kernel_name=$(python3 -c "import json; nb=json.load(open('{{ notebook }}')); print(nb['metadata']['kernelspec']['name'])")
+          expected="{{ expected_kernel }}"
+          if [ "$kernel_name" != "$expected" ]; then
+            echo "ERROR: kernelspec name '$kernel_name' != expected '$expected'"
+            echo "SEPAL's update-app.sh installs kernels as 'venv-<app_name>'. Update notebook metadata."
+            exit 1
+          fi
+          echo "kernelspec name OK: $kernel_name"
+{%- endif %}
 
       - name: Install test deps
         shell: micromamba-shell {0}
