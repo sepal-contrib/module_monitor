@@ -88,41 +88,16 @@
       ]
     },
     {
-      "name": "Jupyter/Conda Modules",
+      "name": "GEE Apps",
       "columns": [
         "#",
         "Module name",
         "Status",
         "conda env",
+        "migration",
         "comments"
       ],
       "modules": [
-        {
-          "name": "sepal_pysmm",
-          "github_url": "https://github.com/sepal-contrib/sepal_pysmm",
-          "conda_env": "yes",
-          "comments": "",
-          "local_dir": "sepal_pysmm",
-          "migration": {
-            "status": "audited",
-            "complexity": "high",
-            "merge_candidate": null,
-            "merge_target": null,
-            "blockers": [],
-            "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit \u2014 module audit + notes file created"
-          },
-          "ci": {
-            "secrets": [
-              "EARTHENGINE_TOKEN"
-            ],
-            "notebook": "ui.ipynb",
-            "skip": false,
-            "ee_fork_version": "1.1.5rc0"
-          },
-          "on_prod": "active",
-          "on_test": "active"
-        },
         {
           "name": "gfc_wrapper_python",
           "github_url": "https://github.com/sepal-contrib/gfc_wrapper_python",
@@ -142,59 +117,6 @@
           "ci": {
             "secrets": [
               "EARTHENGINE_TOKEN"
-            ],
-            "notebook": "ui.ipynb",
-            "skip": false,
-            "ee_fork_version": "1.1.5rc0"
-          },
-          "on_prod": "active",
-          "on_test": "active"
-        },
-        {
-          "name": "vector_manager",
-          "github_url": "https://github.com/sepal-contrib/vector_manager",
-          "conda_env": "yes",
-          "comments": "",
-          "local_dir": "vector_manager",
-          "migration": {
-            "status": "audited",
-            "complexity": "medium",
-            "merge_candidate": null,
-            "merge_target": null,
-            "blockers": [],
-            "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit \u2014 module audit + notes file created"
-          },
-          "ci": {
-            "secrets": [
-              "EARTHENGINE_TOKEN"
-            ],
-            "notebook": "ui.ipynb",
-            "skip": false,
-            "ee_fork_version": "1.1.5rc0"
-          },
-          "on_prod": "active",
-          "on_test": "active"
-        },
-        {
-          "name": "clip-time-series",
-          "github_url": "https://github.com/sepal-contrib/clip-time-series",
-          "conda_env": "yes",
-          "comments": "",
-          "local_dir": "clip-time-series",
-          "migration": {
-            "status": "audited",
-            "complexity": "medium",
-            "merge_candidate": null,
-            "merge_target": null,
-            "blockers": [],
-            "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit \u2014 module audit + notes file created"
-          },
-          "ci": {
-            "secrets": [
-              "EARTHENGINE_TOKEN",
-              "PLANET_API_KEY"
             ],
             "notebook": "ui.ipynb",
             "skip": false,
@@ -231,32 +153,6 @@
           "on_test": "active"
         },
         {
-          "name": "sdg_15.3.1",
-          "github_url": "https://github.com/sepal-contrib/sdg_15.3.1",
-          "conda_env": "yes",
-          "comments": "",
-          "local_dir": "sdg_15.3.1",
-          "migration": {
-            "status": "audited",
-            "complexity": "high",
-            "merge_candidate": null,
-            "merge_target": null,
-            "blockers": [],
-            "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit \u2014 module audit + notes file created"
-          },
-          "ci": {
-            "secrets": [
-              "EARTHENGINE_TOKEN"
-            ],
-            "notebook": "ui.ipynb",
-            "skip": false,
-            "ee_fork_version": "1.6.14"
-          },
-          "on_prod": "active",
-          "on_test": "active"
-        },
-        {
           "name": "tmf_sepal",
           "github_url": "https://github.com/sepal-contrib/tmf_sepal",
           "conda_env": "yes",
@@ -275,33 +171,6 @@
           "ci": {
             "secrets": [
               "EARTHENGINE_TOKEN"
-            ],
-            "notebook": "ui.ipynb",
-            "skip": false,
-            "ee_fork_version": "1.1.5rc0"
-          },
-          "on_prod": "active",
-          "on_test": "active"
-        },
-        {
-          "name": "planet-order",
-          "github_url": "https://github.com/sepal-contrib/planet-order",
-          "conda_env": "yes",
-          "comments": "",
-          "local_dir": "planet-order",
-          "migration": {
-            "status": "audited",
-            "complexity": "medium",
-            "merge_candidate": null,
-            "merge_target": null,
-            "blockers": [],
-            "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit \u2014 module audit + notes file created"
-          },
-          "ci": {
-            "secrets": [
-              "EARTHENGINE_TOKEN",
-              "PLANET_API_KEY"
             ],
             "notebook": "ui.ipynb",
             "skip": false,
@@ -410,6 +279,150 @@
           "ci": {
             "secrets": [
               "EARTHENGINE_TOKEN"
+            ],
+            "notebook": "ui.ipynb",
+            "skip": false,
+            "ee_fork_version": "1.1.5rc0"
+          },
+          "on_prod": "active",
+          "on_test": "active"
+        }
+      ]
+    },
+    {
+      "name": "Jupyter/Conda Modules",
+      "columns": [
+        "#",
+        "Module name",
+        "Status",
+        "conda env",
+        "comments"
+      ],
+      "modules": [
+        {
+          "name": "sepal_pysmm",
+          "github_url": "https://github.com/sepal-contrib/sepal_pysmm",
+          "conda_env": "yes",
+          "comments": "",
+          "local_dir": "sepal_pysmm",
+          "migration": {
+            "status": "audited",
+            "complexity": "high",
+            "merge_candidate": null,
+            "merge_target": null,
+            "blockers": [],
+            "last_session_date": "2026-02-23",
+            "last_session_summary": "Initial audit \u2014 module audit + notes file created"
+          },
+          "ci": {
+            "secrets": [
+              "EARTHENGINE_TOKEN"
+            ],
+            "notebook": "ui.ipynb",
+            "skip": false,
+            "ee_fork_version": "1.1.5rc0"
+          },
+          "on_prod": "active",
+          "on_test": "active"
+        },
+        {
+          "name": "vector_manager",
+          "github_url": "https://github.com/sepal-contrib/vector_manager",
+          "conda_env": "yes",
+          "comments": "",
+          "local_dir": "vector_manager",
+          "migration": {
+            "status": "audited",
+            "complexity": "medium",
+            "merge_candidate": null,
+            "merge_target": null,
+            "blockers": [],
+            "last_session_date": "2026-02-23",
+            "last_session_summary": "Initial audit \u2014 module audit + notes file created"
+          },
+          "ci": {
+            "secrets": [
+              "EARTHENGINE_TOKEN"
+            ],
+            "notebook": "ui.ipynb",
+            "skip": false,
+            "ee_fork_version": "1.1.5rc0"
+          },
+          "on_prod": "active",
+          "on_test": "active"
+        },
+        {
+          "name": "clip-time-series",
+          "github_url": "https://github.com/sepal-contrib/clip-time-series",
+          "conda_env": "yes",
+          "comments": "",
+          "local_dir": "clip-time-series",
+          "migration": {
+            "status": "audited",
+            "complexity": "medium",
+            "merge_candidate": null,
+            "merge_target": null,
+            "blockers": [],
+            "last_session_date": "2026-02-23",
+            "last_session_summary": "Initial audit \u2014 module audit + notes file created"
+          },
+          "ci": {
+            "secrets": [
+              "EARTHENGINE_TOKEN",
+              "PLANET_API_KEY"
+            ],
+            "notebook": "ui.ipynb",
+            "skip": false,
+            "ee_fork_version": "1.1.5rc0"
+          },
+          "on_prod": "active",
+          "on_test": "active"
+        },
+        {
+          "name": "sdg_15.3.1",
+          "github_url": "https://github.com/sepal-contrib/sdg_15.3.1",
+          "conda_env": "yes",
+          "comments": "",
+          "local_dir": "sdg_15.3.1",
+          "migration": {
+            "status": "audited",
+            "complexity": "high",
+            "merge_candidate": null,
+            "merge_target": null,
+            "blockers": [],
+            "last_session_date": "2026-02-23",
+            "last_session_summary": "Initial audit \u2014 module audit + notes file created"
+          },
+          "ci": {
+            "secrets": [
+              "EARTHENGINE_TOKEN"
+            ],
+            "notebook": "ui.ipynb",
+            "skip": false,
+            "ee_fork_version": "1.6.14"
+          },
+          "on_prod": "active",
+          "on_test": "active"
+        },
+        {
+          "name": "planet-order",
+          "github_url": "https://github.com/sepal-contrib/planet-order",
+          "conda_env": "yes",
+          "comments": "",
+          "local_dir": "planet-order",
+          "migration": {
+            "status": "audited",
+            "complexity": "medium",
+            "merge_candidate": null,
+            "merge_target": null,
+            "blockers": [],
+            "last_session_date": "2026-02-23",
+            "last_session_summary": "Initial audit \u2014 module audit + notes file created"
+          },
+          "ci": {
+            "secrets": [
+              "EARTHENGINE_TOKEN",
+              "PLANET_API_KEY"
             ],
             "notebook": "ui.ipynb",
             "skip": false,

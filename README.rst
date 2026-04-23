@@ -30,6 +30,28 @@ Solara Modules
 +----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+
 
 
+GEE Apps
+========
+
++----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+-----------+--------------------------------+------------------------------------------------------+
+| #  | Module name                 | Status                                                                                               | prod | test | conda env | migration                      | comments                                             |
++====+=============================+======================================================================================================+======+======+===========+================================+======================================================+
+| 1  | `gfc_wrapper_python`_       | |gfc_wrapper_python_ci_badge|_                                                                       | ✓    | ✓    | yes       | done → /gfc                    | Lives in sepal-gee-bundle at /gfc                    |
++----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+-----------+--------------------------------+------------------------------------------------------+
+| 2  | `alos_mosaics`_             | |alos_mosaics_ci_badge|_                                                                             | ✓    | ✓    | yes       | done → /alos-mosaics           | Lives in sepal-gee-bundle at /alos-mosaics           |
++----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+-----------+--------------------------------+------------------------------------------------------+
+| 3  | `tmf_sepal`_                | |tmf_sepal_ci_badge|_                                                                                | ✓    | ✓    | yes       | done → /tmf-sepal              | Lives in sepal-gee-bundle at /tmf-sepal              |
++----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+-----------+--------------------------------+------------------------------------------------------+
+| 4  | `coverage_analysis`_        | |coverage_analysis_ci_badge|_                                                                        | ✓    | ✓    | yes       | done → /coverage-analysis      | Lives in sepal-gee-bundle at /coverage-analysis      |
++----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+-----------+--------------------------------+------------------------------------------------------+
+| 5  | `fcdm`_                     | |fcdm_ci_badge|_                                                                                     | ✓    | ✓    | yes       | done → /fcdm                   | Lives in sepal-gee-bundle at /fcdm                   |
++----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+-----------+--------------------------------+------------------------------------------------------+
+| 6  | `basin-rivers`_             | |basin_rivers_ci_badge|_                                                                             | ✓    | ✓    | yes       | done → /basin-rivers           | Lives in sepal-gee-bundle at /basin-rivers           |
++----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+-----------+--------------------------------+------------------------------------------------------+
+| 7  | `gee_source`_               | |gee_source_ci_badge|_                                                                               | ✓    | ✓    | yes       | done → /gee-source             | Lives in sepal-gee-bundle at /gee-source             |
++----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+-----------+--------------------------------+------------------------------------------------------+
+
+
 Jupyter/Conda Modules
 =====================
 
@@ -38,47 +60,33 @@ Jupyter/Conda Modules
 +====+=============================+======================================================================================================+======+======+===========+================================+======================================================+
 | 1  | `sepal_pysmm`_              | |sepal_pysmm_ci_badge|_                                                                              | ✓    | ✓    | yes       | audited                        |                                                      |
 +----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+-----------+--------------------------------+------------------------------------------------------+
-| 2  | `gfc_wrapper_python`_       | |gfc_wrapper_python_ci_badge|_                                                                       | ✓    | ✓    | yes       | done → /gfc                    | Lives in sepal-gee-bundle at /gfc                    |
+| 2  | `vector_manager`_           | |vector_manager_ci_badge|_                                                                           | ✓    | ✓    | yes       | audited                        |                                                      |
 +----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+-----------+--------------------------------+------------------------------------------------------+
-| 3  | `vector_manager`_           | |vector_manager_ci_badge|_                                                                           | ✓    | ✓    | yes       | audited                        |                                                      |
+| 3  | `clip-time-series`_         | |clip_time_series_ci_badge|_                                                                         | ✓    | ✓    | yes       | audited                        |                                                      |
 +----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+-----------+--------------------------------+------------------------------------------------------+
-| 4  | `clip-time-series`_         | |clip_time_series_ci_badge|_                                                                         | ✓    | ✓    | yes       | audited                        |                                                      |
+| 4  | `sdg_15.3.1`_               | |sdg_15_3_1_ci_badge|_                                                                               | ✓    | ✓    | yes       | audited                        |                                                      |
 +----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+-----------+--------------------------------+------------------------------------------------------+
-| 5  | `alos_mosaics`_             | |alos_mosaics_ci_badge|_                                                                             | ✓    | ✓    | yes       | done → /alos-mosaics           | Lives in sepal-gee-bundle at /alos-mosaics           |
+| 5  | `planet-order`_             | |planet_order_ci_badge|_                                                                             | ✓    | ✓    | yes       | audited                        |                                                      |
 +----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+-----------+--------------------------------+------------------------------------------------------+
-| 6  | `sdg_15.3.1`_               | |sdg_15_3_1_ci_badge|_                                                                               | ✓    | ✓    | yes       | audited                        |                                                      |
+| 6  | `active_fires_explorer`_    | |active_fires_explorer_ci_badge|_                                                                    | ✓    | ✓    | yes       | audited                        |                                                      |
 +----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+-----------+--------------------------------+------------------------------------------------------+
-| 7  | `tmf_sepal`_                | |tmf_sepal_ci_badge|_                                                                                | ✓    | ✓    | yes       | done → /tmf-sepal              | Lives in sepal-gee-bundle at /tmf-sepal              |
+| 7  | `sepal_smfm_biota`_         | |sepal_smfm_biota_ci_badge|_                                                                         | ✓    | ✓    | yes       | audited                        |                                                      |
 +----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+-----------+--------------------------------+------------------------------------------------------+
-| 8  | `planet-order`_             | |planet_order_ci_badge|_                                                                             | ✓    | ✓    | yes       | audited                        |                                                      |
+| 8  | `smfm_deforest`_            |                                                                                                      | ✓    | ✓    | yes       | skip                           | external repo, not cloned locally                    |
 +----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+-----------+--------------------------------+------------------------------------------------------+
-| 9  | `coverage_analysis`_        | |coverage_analysis_ci_badge|_                                                                        | ✓    | ✓    | yes       | done → /coverage-analysis      | Lives in sepal-gee-bundle at /coverage-analysis      |
+| 9  | `gwb`_                      | |gwb_ci_badge|_                                                                                      | ✓    | ✓    | yes       | audited                        |                                                      |
 +----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+-----------+--------------------------------+------------------------------------------------------+
-| 10 | `fcdm`_                     | |fcdm_ci_badge|_                                                                                     | ✓    | ✓    | yes       | done → /fcdm                   | Lives in sepal-gee-bundle at /fcdm                   |
+| 10 | `cumsum_change`_            | |cumsum_change_ci_badge|_                                                                            | ✓    | ✓    | yes       | audited                        | Declined for sepal-gee-bundle (local TF/rasterio)    |
 +----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+-----------+--------------------------------+------------------------------------------------------+
-| 11 | `basin-rivers`_             | |basin_rivers_ci_badge|_                                                                             | ✓    | ✓    | yes       | done → /basin-rivers           | Lives in sepal-gee-bundle at /basin-rivers           |
+| 11 | `weplan`_                   | |weplan_ci_badge|_                                                                                   | ✓    |      | yes       | audited                        | only in prod server                                  |
 +----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+-----------+--------------------------------+------------------------------------------------------+
-| 12 | `gee_source`_               | |gee_source_ci_badge|_                                                                               | ✓    | ✓    | yes       | done → /gee-source             | Lives in sepal-gee-bundle at /gee-source             |
+| 12 | `sepal-leafmap`_            | |sepal_leafmap_ci_badge|_                                                                            | ○    | ✓    | yes       | audited                        |                                                      |
 +----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+-----------+--------------------------------+------------------------------------------------------+
-| 13 | `active_fires_explorer`_    | |active_fires_explorer_ci_badge|_                                                                    | ✓    | ✓    | yes       | audited                        |                                                      |
+| 13 | `eSBAE_notebooks`_          |                                                                                                      | ○    | ✓    |           | audited                        | notebooks, not a standard module                     |
 +----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+-----------+--------------------------------+------------------------------------------------------+
-| 14 | `sepal_smfm_biota`_         | |sepal_smfm_biota_ci_badge|_                                                                         | ✓    | ✓    | yes       | audited                        |                                                      |
+| 14 | `deforestation-alerts`_     | |deforestation_alerts_ci_badge|_                                                                     | ✓    | ✓    | yes       | audited                        |                                                      |
 +----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+-----------+--------------------------------+------------------------------------------------------+
-| 15 | `smfm_deforest`_            |                                                                                                      | ✓    | ✓    | yes       | skip                           | external repo, not cloned locally                    |
-+----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+-----------+--------------------------------+------------------------------------------------------+
-| 16 | `gwb`_                      | |gwb_ci_badge|_                                                                                      | ✓    | ✓    | yes       | audited                        |                                                      |
-+----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+-----------+--------------------------------+------------------------------------------------------+
-| 17 | `cumsum_change`_            | |cumsum_change_ci_badge|_                                                                            | ✓    | ✓    | yes       | audited                        | Declined for sepal-gee-bundle (local TF/rasterio)    |
-+----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+-----------+--------------------------------+------------------------------------------------------+
-| 18 | `weplan`_                   | |weplan_ci_badge|_                                                                                   | ✓    |      | yes       | audited                        | only in prod server                                  |
-+----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+-----------+--------------------------------+------------------------------------------------------+
-| 19 | `sepal-leafmap`_            | |sepal_leafmap_ci_badge|_                                                                            | ○    | ✓    | yes       | audited                        |                                                      |
-+----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+-----------+--------------------------------+------------------------------------------------------+
-| 20 | `eSBAE_notebooks`_          |                                                                                                      | ○    | ✓    |           | audited                        | notebooks, not a standard module                     |
-+----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+-----------+--------------------------------+------------------------------------------------------+
-| 21 | `deforestation-alerts`_     | |deforestation_alerts_ci_badge|_                                                                     | ✓    | ✓    | yes       | audited                        |                                                      |
-+----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+-----------+--------------------------------+------------------------------------------------------+
-| 22 | `sbae-design`_              | |sbae_design_ci_badge|_  |sbae_design_unit_badge|_                                                   | ✓    | ✓    | yes       | done                           | reference Solara implementation                      |
+| 15 | `sbae-design`_              | |sbae_design_ci_badge|_  |sbae_design_unit_badge|_                                                   | ✓    | ✓    | yes       | done                           | reference Solara implementation                      |
 +----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+-----------+--------------------------------+------------------------------------------------------+
 
 
@@ -141,18 +149,18 @@ Modules are grouped into categories, each with its own table columns.
 .. _se.plan: https://github.com/sepal-contrib/se.plan
 .. _sepal_mgci: https://github.com/sepal-contrib/sepal_mgci
 .. _sepal-gee-bundle: https://github.com/sepal-contrib/sepal-gee-bundle
-.. _sepal_pysmm: https://github.com/sepal-contrib/sepal_pysmm
 .. _gfc_wrapper_python: https://github.com/sepal-contrib/gfc_wrapper_python
-.. _vector_manager: https://github.com/sepal-contrib/vector_manager
-.. _clip-time-series: https://github.com/sepal-contrib/clip-time-series
 .. _alos_mosaics: https://github.com/sepal-contrib/alos_mosaics
-.. _sdg_15.3.1: https://github.com/sepal-contrib/sdg_15.3.1
 .. _tmf_sepal: https://github.com/sepal-contrib/tmf_sepal
-.. _planet-order: https://github.com/sepal-contrib/planet-order
 .. _coverage_analysis: https://github.com/sepal-contrib/coverage_analysis
 .. _fcdm: https://github.com/sepal-contrib/fcdm
 .. _basin-rivers: https://github.com/sepal-contrib/basin-rivers
 .. _gee_source: https://github.com/sepal-contrib/gee_source
+.. _sepal_pysmm: https://github.com/sepal-contrib/sepal_pysmm
+.. _vector_manager: https://github.com/sepal-contrib/vector_manager
+.. _clip-time-series: https://github.com/sepal-contrib/clip-time-series
+.. _sdg_15.3.1: https://github.com/sepal-contrib/sdg_15.3.1
+.. _planet-order: https://github.com/sepal-contrib/planet-order
 .. _active_fires_explorer: https://github.com/sepal-contrib/planet_active_fires_explorer
 .. _sepal_smfm_biota: https://github.com/sepal-contrib/sepal_smfm_biota
 .. _smfm_deforest: https://github.com/smfm-project/deforest
@@ -171,37 +179,17 @@ Modules are grouped into categories, each with its own table columns.
    :alt: unit.yml
 .. _sepal_ui_unit_badge: https://github.com/openforis/sepal_ui/actions/workflows/unit.yml
 
-.. |sepal_pysmm_ci_badge| image:: https://github.com/sepal-contrib/sepal_pysmm/actions/workflows/ci.yaml/badge.svg
-   :alt: ci.yaml
-.. _sepal_pysmm_ci_badge: https://github.com/sepal-contrib/sepal_pysmm/actions/workflows/ci.yaml
-
 .. |gfc_wrapper_python_ci_badge| image:: https://github.com/sepal-contrib/gfc_wrapper_python/actions/workflows/ci.yaml/badge.svg
    :alt: ci.yaml
 .. _gfc_wrapper_python_ci_badge: https://github.com/sepal-contrib/gfc_wrapper_python/actions/workflows/ci.yaml
-
-.. |vector_manager_ci_badge| image:: https://github.com/sepal-contrib/vector_manager/actions/workflows/ci.yaml/badge.svg
-   :alt: ci.yaml
-.. _vector_manager_ci_badge: https://github.com/sepal-contrib/vector_manager/actions/workflows/ci.yaml
-
-.. |clip_time_series_ci_badge| image:: https://github.com/sepal-contrib/clip-time-series/actions/workflows/ci.yaml/badge.svg
-   :alt: ci.yaml
-.. _clip_time_series_ci_badge: https://github.com/sepal-contrib/clip-time-series/actions/workflows/ci.yaml
 
 .. |alos_mosaics_ci_badge| image:: https://github.com/sepal-contrib/alos_mosaics/actions/workflows/ci.yaml/badge.svg
    :alt: ci.yaml
 .. _alos_mosaics_ci_badge: https://github.com/sepal-contrib/alos_mosaics/actions/workflows/ci.yaml
 
-.. |sdg_15_3_1_ci_badge| image:: https://github.com/sepal-contrib/sdg_15.3.1/actions/workflows/ci.yaml/badge.svg
-   :alt: ci.yaml
-.. _sdg_15_3_1_ci_badge: https://github.com/sepal-contrib/sdg_15.3.1/actions/workflows/ci.yaml
-
 .. |tmf_sepal_ci_badge| image:: https://github.com/sepal-contrib/tmf_sepal/actions/workflows/ci.yaml/badge.svg
    :alt: ci.yaml
 .. _tmf_sepal_ci_badge: https://github.com/sepal-contrib/tmf_sepal/actions/workflows/ci.yaml
-
-.. |planet_order_ci_badge| image:: https://github.com/sepal-contrib/planet-order/actions/workflows/ci.yaml/badge.svg
-   :alt: ci.yaml
-.. _planet_order_ci_badge: https://github.com/sepal-contrib/planet-order/actions/workflows/ci.yaml
 
 .. |coverage_analysis_ci_badge| image:: https://github.com/sepal-contrib/coverage_analysis/actions/workflows/ci.yaml/badge.svg
    :alt: ci.yaml
@@ -218,6 +206,26 @@ Modules are grouped into categories, each with its own table columns.
 .. |gee_source_ci_badge| image:: https://github.com/sepal-contrib/gee_source/actions/workflows/ci.yaml/badge.svg
    :alt: ci.yaml
 .. _gee_source_ci_badge: https://github.com/sepal-contrib/gee_source/actions/workflows/ci.yaml
+
+.. |sepal_pysmm_ci_badge| image:: https://github.com/sepal-contrib/sepal_pysmm/actions/workflows/ci.yaml/badge.svg
+   :alt: ci.yaml
+.. _sepal_pysmm_ci_badge: https://github.com/sepal-contrib/sepal_pysmm/actions/workflows/ci.yaml
+
+.. |vector_manager_ci_badge| image:: https://github.com/sepal-contrib/vector_manager/actions/workflows/ci.yaml/badge.svg
+   :alt: ci.yaml
+.. _vector_manager_ci_badge: https://github.com/sepal-contrib/vector_manager/actions/workflows/ci.yaml
+
+.. |clip_time_series_ci_badge| image:: https://github.com/sepal-contrib/clip-time-series/actions/workflows/ci.yaml/badge.svg
+   :alt: ci.yaml
+.. _clip_time_series_ci_badge: https://github.com/sepal-contrib/clip-time-series/actions/workflows/ci.yaml
+
+.. |sdg_15_3_1_ci_badge| image:: https://github.com/sepal-contrib/sdg_15.3.1/actions/workflows/ci.yaml/badge.svg
+   :alt: ci.yaml
+.. _sdg_15_3_1_ci_badge: https://github.com/sepal-contrib/sdg_15.3.1/actions/workflows/ci.yaml
+
+.. |planet_order_ci_badge| image:: https://github.com/sepal-contrib/planet-order/actions/workflows/ci.yaml/badge.svg
+   :alt: ci.yaml
+.. _planet_order_ci_badge: https://github.com/sepal-contrib/planet-order/actions/workflows/ci.yaml
 
 .. |active_fires_explorer_ci_badge| image:: https://github.com/sepal-contrib/planet_active_fires_explorer/actions/workflows/ci.yaml/badge.svg
    :alt: ci.yaml
