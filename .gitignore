@@ -167,3 +167,7 @@ tasks/
 monitoring/snapshots/*.json
 monitoring/reports/*.md
 monitoring/draft-issues/*.md
+
+# Claude Code — local-only, not shared
+CLAUDE.md
+.claude/

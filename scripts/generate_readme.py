@@ -49,6 +49,28 @@ def server_icon(mod: dict, key: str) -> str:
     return _SERVER_ICONS.get(mod.get(key, ""), "")
 
 
+def migration_label(mod: dict) -> str:
+    """Short migration-state label for the README table.
+
+    Combines `migration.status` with `migration.merge_target` (short form)
+    and optional `migration.migrated_route` into a single cell, e.g.:
+
+        done → sepal-gee-bundle /gfc
+        audited
+        skip
+    """
+    mig = mod.get("migration") or {}
+    status = mig.get("status") or ""
+    target = mig.get("merge_target") or ""
+    route = mig.get("migrated_route") or ""
+    if status == "done" and target:
+        short_target = target.split("/")[-1] if "/" in target else target
+        if route:
+            return f"done → {route}"
+        return f"done → {short_target}"
+    return status
+
+
 def main():
     scripts_dir = Path(__file__).parent
     project_root = scripts_dir.parent
@@ -71,6 +93,7 @@ def main():
     env.globals["get_workflows"] = get_workflows
     env.globals["badge_cells"] = badge_cells
     env.globals["server_icon"] = server_icon
+    env.globals["migration_label"] = migration_label
 
     template = env.get_template("README.rst.j2")
     output = template.render(categories=data["categories"], all_modules=all_modules)

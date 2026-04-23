@@ -22,10 +22,10 @@
 {{ sep }}
 {% endfor -%}
 {% else -%}
-{% set sep = "+" ~ "-" * 4 ~ "+" ~ "-" * 29 ~ "+" ~ "-" * 102 ~ "+" ~ "-" * 6 ~ "+" ~ "-" * 6 ~ "+" ~ "-" * 11 ~ "+" ~ "-" * 37 ~ "+" -%}
-{% set headsep = "+" ~ "=" * 4 ~ "+" ~ "=" * 29 ~ "+" ~ "=" * 102 ~ "+" ~ "=" * 6 ~ "+" ~ "=" * 6 ~ "+" ~ "=" * 11 ~ "+" ~ "=" * 37 ~ "+" -%}
+{% set sep = "+" ~ "-" * 4 ~ "+" ~ "-" * 29 ~ "+" ~ "-" * 102 ~ "+" ~ "-" * 6 ~ "+" ~ "-" * 6 ~ "+" ~ "-" * 11 ~ "+" ~ "-" * 32 ~ "+" ~ "-" * 42 ~ "+" -%}
+{% set headsep = "+" ~ "=" * 4 ~ "+" ~ "=" * 29 ~ "+" ~ "=" * 102 ~ "+" ~ "=" * 6 ~ "+" ~ "=" * 6 ~ "+" ~ "=" * 11 ~ "+" ~ "=" * 32 ~ "+" ~ "=" * 42 ~ "+" -%}
 {{ sep }}
-| {{ "#" | pad(2) }} | {{ "Module name" | pad(27) }} | {{ "Status" | pad(100) }} | {{ "prod" | pad(4) }} | {{ "test" | pad(4) }} | {{ "conda env" | pad(9) }} | {{ "comments" | pad(35) }} |
+| {{ "#" | pad(2) }} | {{ "Module name" | pad(27) }} | {{ "Status" | pad(100) }} | {{ "prod" | pad(4) }} | {{ "test" | pad(4) }} | {{ "conda env" | pad(9) }} | {{ "migration" | pad(30) }} | {{ "comments" | pad(40) }} |
 {{ headsep }}
 {% for mod in cat.modules -%}
 {% set name_cell = "`" ~ mod.name ~ "`_" -%}
@@ -33,8 +33,9 @@
 {% set prod_cell = server_icon(mod, "on_prod") -%}
 {% set test_cell = server_icon(mod, "on_test") -%}
 {% set conda_cell = mod.get("conda_env", "") -%}
+{% set migration_cell = migration_label(mod) -%}
 {% set comments_cell = mod.get("comments", "") -%}
-| {{ loop.index | string | pad(2) }} | {{ name_cell | pad(27) }} | {{ badge_cell | pad(100) }} | {{ prod_cell | pad(4) }} | {{ test_cell | pad(4) }} | {{ conda_cell | pad(9) }} | {{ comments_cell | pad(35) }} |
+| {{ loop.index | string | pad(2) }} | {{ name_cell | pad(27) }} | {{ badge_cell | pad(100) }} | {{ prod_cell | pad(4) }} | {{ test_cell | pad(4) }} | {{ conda_cell | pad(9) }} | {{ migration_cell | pad(30) }} | {{ comments_cell | pad(40) }} |
 {{ sep }}
 {% endfor -%}
 {% endif -%}

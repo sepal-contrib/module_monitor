@@ -127,7 +127,7 @@
           "name": "gfc_wrapper_python",
           "github_url": "https://github.com/sepal-contrib/gfc_wrapper_python",
           "conda_env": "yes",
-          "comments": "",
+          "comments": "Lives in sepal-gee-bundle at /gfc",
           "local_dir": "gfc_wrapper_python",
           "migration": {
             "status": "done",
@@ -207,7 +207,7 @@
           "name": "alos_mosaics",
           "github_url": "https://github.com/sepal-contrib/alos_mosaics",
           "conda_env": "yes",
-          "comments": "",
+          "comments": "Lives in sepal-gee-bundle at /alos-mosaics",
           "local_dir": "alos_mosaics",
           "migration": {
             "status": "done",
@@ -260,7 +260,7 @@
           "name": "tmf_sepal",
           "github_url": "https://github.com/sepal-contrib/tmf_sepal",
           "conda_env": "yes",
-          "comments": "",
+          "comments": "Lives in sepal-gee-bundle at /tmf-sepal",
           "local_dir": "tmf_sepal",
           "migration": {
             "status": "done",
@@ -314,7 +314,7 @@
           "name": "coverage_analysis",
           "github_url": "https://github.com/sepal-contrib/coverage_analysis",
           "conda_env": "yes",
-          "comments": "",
+          "comments": "Lives in sepal-gee-bundle at /coverage-analysis",
           "local_dir": "coverage_analysis",
           "migration": {
             "status": "done",
@@ -341,7 +341,7 @@
           "name": "fcdm",
           "github_url": "https://github.com/sepal-contrib/fcdm",
           "conda_env": "yes",
-          "comments": "",
+          "comments": "Lives in sepal-gee-bundle at /fcdm",
           "local_dir": "fcdm",
           "migration": {
             "status": "done",
@@ -368,7 +368,7 @@
           "name": "basin-rivers",
           "github_url": "https://github.com/sepal-contrib/basin-rivers",
           "conda_env": "yes",
-          "comments": "",
+          "comments": "Lives in sepal-gee-bundle at /basin-rivers",
           "local_dir": "basin-rivers",
           "migration": {
             "status": "done",
@@ -395,7 +395,7 @@
           "name": "gee_source",
           "github_url": "https://github.com/sepal-contrib/gee_source",
           "conda_env": "yes",
-          "comments": "",
+          "comments": "Lives in sepal-gee-bundle at /gee-source",
           "local_dir": "gee_source",
           "migration": {
             "status": "done",
@@ -518,7 +518,7 @@
           "name": "cumsum_change",
           "github_url": "https://github.com/sepal-contrib/cumsum_change",
           "conda_env": "yes",
-          "comments": "",
+          "comments": "Declined for sepal-gee-bundle (local TF/rasterio)",
           "local_dir": "cumsum_change",
           "migration": {
             "status": "audited",
