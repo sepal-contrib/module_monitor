@@ -39,6 +39,51 @@
           "local_dir": "sepal_mgci",
           "on_prod": "active",
           "on_test": "active"
+        },
+        {
+          "name": "sepal-gee-bundle",
+          "github_url": "https://github.com/sepal-contrib/sepal-gee-bundle",
+          "local_dir": "sepal-gee-bundle",
+          "on_prod": "pending",
+          "on_test": "pending",
+          "description": "Lightweight GEE-based SEPAL apps sharing a single Solara container. One Docker image, one process, per-app routes.",
+          "apps": [
+            {
+              "route": "/gfc",
+              "name": "Global Forest Change",
+              "legacy": "gfc_wrapper_python"
+            },
+            {
+              "route": "/basin-rivers",
+              "name": "Basin Rivers",
+              "legacy": "basin-rivers"
+            },
+            {
+              "route": "/fcdm",
+              "name": "Forest Canopy Disturbance",
+              "legacy": "fcdm"
+            },
+            {
+              "route": "/coverage-analysis",
+              "name": "Coverage Analysis",
+              "legacy": "coverage_analysis"
+            },
+            {
+              "route": "/tmf-sepal",
+              "name": "Tropical Moist Forests",
+              "legacy": "tmf_sepal"
+            },
+            {
+              "route": "/alos-mosaics",
+              "name": "ALOS Mosaics",
+              "legacy": "alos_mosaics"
+            },
+            {
+              "route": "/gee-source",
+              "name": "GEE Source",
+              "legacy": "gee_source"
+            }
+          ]
         }
       ]
     },
