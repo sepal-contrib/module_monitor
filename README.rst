@@ -24,6 +24,10 @@ Solara Modules
 |    |                             |                                                                                                      |      |      |
 |    |                             |                                                                                                      |      |      |
 +----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+
+| 3  | `sepal-gee-bundle`_         |                                                                                                      |      |      |
+|    |                             |                                                                                                      |      |      |
+|    |                             |                                                                                                      |      |      |
++----+-----------------------------+------------------------------------------------------------------------------------------------------+------+------+
 
 
 Jupyter/Conda Modules
@@ -136,6 +140,7 @@ Modules are grouped into categories, each with its own table columns.
 .. _sepal_ui: https://github.com/openforis/sepal_ui
 .. _se.plan: https://github.com/sepal-contrib/se.plan
 .. _sepal_mgci: https://github.com/sepal-contrib/sepal_mgci
+.. _sepal-gee-bundle: https://github.com/sepal-contrib/sepal-gee-bundle
 .. _sepal_pysmm: https://github.com/sepal-contrib/sepal_pysmm
 .. _gfc_wrapper_python: https://github.com/sepal-contrib/gfc_wrapper_python
 .. _vector_manager: https://github.com/sepal-contrib/vector_manager
