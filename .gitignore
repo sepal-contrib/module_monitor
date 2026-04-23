@@ -171,3 +171,6 @@ monitoring/draft-issues/*.md
 # Claude Code — local-only, not shared
 CLAUDE.md
 .claude/
+scripts/CLAUDE_MASTER.md.j2
+scripts/generate_claude_md.py
+scripts/generate_repo_claude_mds.py
