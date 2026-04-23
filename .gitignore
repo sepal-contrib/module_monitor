@@ -168,7 +168,7 @@ monitoring/snapshots/*.json
 monitoring/reports/*.md
 monitoring/draft-issues/*.md
 
-# Claude Code — local-only, not shared
+# AI-assistant scratch and per-agent tooling — local-only, not shared
 CLAUDE.md
 .claude/
 scripts/CLAUDE_MASTER.md.j2
