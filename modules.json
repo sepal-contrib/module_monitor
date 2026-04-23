@@ -85,13 +85,14 @@
           "comments": "",
           "local_dir": "gfc_wrapper_python",
           "migration": {
-            "status": "audited",
+            "status": "done",
             "complexity": "medium",
-            "merge_candidate": null,
-            "merge_target": null,
+            "merge_candidate": "sepal-contrib/sepal-gee-bundle",
+            "merge_target": "sepal-contrib/sepal-gee-bundle",
             "blockers": [],
-            "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+            "last_session_date": "2026-04-23",
+            "last_session_summary": "Migrated into sepal-contrib/sepal-gee-bundle at route /gfc: Hansen Global Forest Change visualization + dashboard + export",
+            "migrated_route": "/gfc"
           },
           "ci": {
             "secrets": [
@@ -164,13 +165,14 @@
           "comments": "",
           "local_dir": "alos_mosaics",
           "migration": {
-            "status": "audited",
+            "status": "done",
             "complexity": "medium",
-            "merge_candidate": null,
-            "merge_target": null,
+            "merge_candidate": "sepal-contrib/sepal-gee-bundle",
+            "merge_target": "sepal-contrib/sepal-gee-bundle",
             "blockers": [],
-            "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+            "last_session_date": "2026-04-23",
+            "last_session_summary": "Migrated into sepal-contrib/sepal-gee-bundle at route /alos-mosaics: JAXA ALOS PALSAR yearly mosaics + FNF classification + legend",
+            "migrated_route": "/alos-mosaics"
           },
           "ci": {
             "secrets": [
@@ -216,13 +218,14 @@
           "comments": "",
           "local_dir": "tmf_sepal",
           "migration": {
-            "status": "audited",
+            "status": "done",
             "complexity": "low",
-            "merge_candidate": null,
-            "merge_target": null,
+            "merge_candidate": "sepal-contrib/sepal-gee-bundle",
+            "merge_target": "sepal-contrib/sepal-gee-bundle",
             "blockers": [],
-            "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+            "last_session_date": "2026-04-23",
+            "last_session_summary": "Migrated into sepal-contrib/sepal-gee-bundle at route /tmf-sepal: JRC TMF DEG/DEF/CHG visualization + area statistics dashboard",
+            "migrated_route": "/tmf-sepal"
           },
           "ci": {
             "secrets": [
@@ -269,13 +272,14 @@
           "comments": "",
           "local_dir": "coverage_analysis",
           "migration": {
-            "status": "audited",
+            "status": "done",
             "complexity": "medium",
-            "merge_candidate": null,
-            "merge_target": null,
+            "merge_candidate": "sepal-contrib/sepal-gee-bundle",
+            "merge_target": "sepal-contrib/sepal-gee-bundle",
             "blockers": [],
-            "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+            "last_session_date": "2026-04-23",
+            "last_session_summary": "Migrated into sepal-contrib/sepal-gee-bundle at route /coverage-analysis: Landsat/S2 coverage & NDVI statistics; C01->C02 migration; dashboard with per-sensor + per-year image counts",
+            "migrated_route": "/coverage-analysis"
           },
           "ci": {
             "secrets": [
@@ -295,13 +299,14 @@
           "comments": "",
           "local_dir": "fcdm",
           "migration": {
-            "status": "audited",
+            "status": "done",
             "complexity": "high",
-            "merge_candidate": null,
-            "merge_target": null,
+            "merge_candidate": "sepal-contrib/sepal-gee-bundle",
+            "merge_target": "sepal-contrib/sepal-gee-bundle",
             "blockers": [],
-            "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+            "last_session_date": "2026-04-23",
+            "last_session_summary": "Migrated into sepal-contrib/sepal-gee-bundle at route /fcdm: Delta-rNBR forest canopy disturbance detection; C01->C02 migration; custom forest-mask asset UI",
+            "migrated_route": "/fcdm"
           },
           "ci": {
             "secrets": [
@@ -321,13 +326,14 @@
           "comments": "",
           "local_dir": "basin-rivers",
           "migration": {
-            "status": "audited",
+            "status": "done",
             "complexity": "medium",
-            "merge_candidate": null,
-            "merge_target": null,
+            "merge_candidate": "sepal-contrib/sepal-gee-bundle",
+            "merge_target": "sepal-contrib/sepal-gee-bundle",
             "blockers": [],
-            "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+            "last_session_date": "2026-04-23",
+            "last_session_summary": "Migrated into sepal-contrib/sepal-gee-bundle at route /basin-rivers: HydroSHEDS upstream delineation + Hansen GFC per-basin stats + dashboard + PDF report",
+            "migrated_route": "/basin-rivers"
           },
           "ci": {
             "secrets": [
@@ -347,13 +353,14 @@
           "comments": "",
           "local_dir": "gee_source",
           "migration": {
-            "status": "audited",
+            "status": "done",
             "complexity": "low",
-            "merge_candidate": null,
-            "merge_target": null,
+            "merge_candidate": "sepal-contrib/sepal-gee-bundle",
+            "merge_target": "sepal-contrib/sepal-gee-bundle",
             "blockers": [],
-            "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+            "last_session_date": "2026-04-23",
+            "last_session_summary": "Migrated into sepal-contrib/sepal-gee-bundle at route /gee-source: Earth Engine App -> JavaScript source extractor (HTTP scrape, not a GEE app)",
+            "migrated_route": "/gee-source"
           },
           "ci": {
             "secrets": [
@@ -474,8 +481,8 @@
             "merge_candidate": null,
             "merge_target": null,
             "blockers": [],
-            "last_session_date": "2026-02-23",
-            "last_session_summary": "Initial audit \u2014 CLAUDE.md created"
+            "last_session_date": "2026-04-23",
+            "last_session_summary": "Evaluated for sepal-gee-bundle but declined: runs locally (TensorFlow + rasterio pipeline), not a lightweight GEE app. Bundle charter is GEE-only."
           },
           "ci": {
             "secrets": [
