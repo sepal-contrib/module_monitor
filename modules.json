@@ -673,6 +673,84 @@
           },
           "on_prod": "active",
           "on_test": "active"
+        },
+        {
+          "name": "spatial-risk-module",
+          "github_url": "https://github.com/sepal-contrib/spatial-risk-module",
+          "conda_env": "yes",
+          "comments": "pysepal fork: SerafiniJose@spatial-risk",
+          "local_dir": "spatial-risk-module",
+          "on_prod": "active",
+          "on_test": "active"
+        }
+      ]
+    },
+    {
+      "name": "Shiny Modules",
+      "columns": [
+        "#",
+        "Module name",
+        "Status",
+        "conda env",
+        "comments"
+      ],
+      "modules": [
+        {
+          "name": "bfast-explorer",
+          "github_url": "https://github.com/sepal-contrib/bfast-explorer",
+          "conda_env": "no",
+          "comments": "R/shiny; fork of almeidaxan/bfast-explorer",
+          "local_dir": "bfast-explorer",
+          "on_prod": "active",
+          "on_test": "active"
+        },
+        {
+          "name": "bfastspatial",
+          "github_url": "https://github.com/sepal-contrib/bfastspatial",
+          "conda_env": "no",
+          "comments": "R/shiny",
+          "local_dir": "bfastspatial",
+          "on_prod": "active",
+          "on_test": "active"
+        }
+      ]
+    },
+    {
+      "name": "Environments (hidden in SEPAL)",
+      "columns": [
+        "#",
+        "Module name",
+        "Status",
+        "conda env",
+        "comments"
+      ],
+      "modules": [
+        {
+          "name": "pyeo",
+          "github_url": "https://github.com/clcr/pyeo",
+          "conda_env": "no",
+          "comments": "environment.yml, not sepal_environment.yml",
+          "local_dir": "pyeo",
+          "on_prod": "hidden",
+          "on_test": "hidden"
+        },
+        {
+          "name": "alerts-viewer",
+          "github_url": "https://github.com/dfguerrerom/alerts-viewer",
+          "conda_env": "yes",
+          "comments": "prod only",
+          "local_dir": "alerts-viewer",
+          "on_prod": "hidden",
+          "on_test": "missing"
+        },
+        {
+          "name": "sepal-sam",
+          "github_url": "https://github.com/dfguerrerom/sepal-sam",
+          "conda_env": "yes",
+          "comments": "",
+          "local_dir": "sepal-sam",
+          "on_prod": "hidden",
+          "on_test": "hidden"
         }
       ]
     },

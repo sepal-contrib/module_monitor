@@ -26,9 +26,21 @@ def get_workflows(mod: dict) -> list[str]:
     return []
 
 
+OVERFLOWS = []
+
+
 def pad(value, width: int) -> str:
-    """Left-align a string within a field of given width."""
-    return str(value).ljust(width)
+    """Left-align within a fixed field, truncating rather than widening it.
+
+    These are RST grid tables: a cell wider than its column silently produces a
+    malformed table that renders as a wall of text. Truncating keeps the table
+    valid, and the overflow is reported so the entry can be shortened.
+    """
+    text = str(value)
+    if len(text) > width:
+        OVERFLOWS.append(text)
+        return text[: width - 1] + "\u2026"
+    return text.ljust(width)
 
 
 _SERVER_ICONS = {"active": "\u2713", "hidden": "\u25cb"}
@@ -99,6 +111,8 @@ def main():
     output = template.render(categories=data["categories"], all_modules=all_modules)
     (project_root / "README.rst").write_text(output)
     print("README.rst generated successfully.")
+    for text in OVERFLOWS:
+        print(f"  truncated to fit its column: {text!r}")
 
 
 if __name__ == "__main__":
