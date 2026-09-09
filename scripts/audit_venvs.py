@@ -48,13 +48,16 @@ LIVE = f"{JUPYTER}/current-kernels"  # where it moves the result, and writes ker
 LOGS = f"{JUPYTER}/log"
 APPS = "/var/lib/sepal/app-manager/apps"  # the git clones; same volume as ~/shared/apps
 
-SIZES = True  # du per venv; set False if the servers are under load
-STALE_DAYS = 7
+# A conda venv holds hundreds of thousands of files, so `du` on one takes real
+# time and thirty of them takes far longer than anyone will wait. Sizes are
+# therefore off by default and, when on, measured only for the directories the
+# cleanup section actually proposes to delete.
+SIZES = False
 
 
 def sh(*cmd):
     try:
-        r = subprocess.run(cmd, capture_output=True, text=True, timeout=120)
+        r = subprocess.run(cmd, capture_output=True, text=True, timeout=60)
         return r.stdout.strip()
     except (OSError, subprocess.SubprocessError):
         return ""
@@ -70,11 +73,20 @@ def human(n):
     return f"{n:.0f}P"
 
 
+_sizes = {}
+
+
 def size_of(path):
     if not SIZES or not os.path.isdir(path):
         return 0
-    out = sh("du", "-sb", path)
-    return int(out.split()[0]) if out and out.split()[0].isdigit() else 0
+    if path not in _sizes:
+        out = sh("du", "-sb", path)
+        _sizes[path] = int(out.split()[0]) if out and out.split()[0].isdigit() else 0
+    return _sizes[path]
+
+
+def app_size(app):
+    return size_of(f"{BUILD}/venv-{app}") + size_of(f"{LIVE}/venv-{app}")
 
 
 def version_of(venv):
@@ -187,7 +199,6 @@ apps = sorted({os.path.basename(d)[5:]
                for d in glob.glob(f"{root}/venv-*")} - {"to-remove"})
 
 served, leftover, orphan, broken, split, patched = [], [], [], [], [], []
-reclaim = 0
 
 for app in apps:
     build_venv, live_venv = f"{BUILD}/venv-{app}/venv", f"{LIVE}/venv-{app}/venv"
@@ -201,22 +212,19 @@ for app in apps:
     version, library = version_of(venv)
     iv, why = ipyvuetify_of(venv)
     built = built_date(venv)
-    size = size_of(f"{BUILD}/venv-{app}") + size_of(f"{LIVE}/venv-{app}")
 
     kernel_json = f"{LIVE}/venv-{app}/kernel.json"
     has_spec = os.path.exists(kernel_json)
     if carto_key_in(kernel_json):
         patched.append((app, built, "wiped on next rebuild"))
     if has_build and has_live:
-        split.append((app, human(size_of(f"{BUILD}/venv-{app}")), human(size_of(f"{LIVE}/venv-{app}"))))
+        split.append((app, "yes", "yes"))
 
     entry = catalog.get(app)
     if entry is None:
-        orphan.append((app, version, built, human(size)))
-        reclaim += size
+        orphan.append((app, version, built))
     elif (entry.get("endpoint") or "") == "docker":
-        leftover.append((app, version, built, human(size)))
-        reclaim += size
+        leftover.append((app, version, built))
     else:
         flags = []
         if rebuild_failing(app, built):
@@ -226,6 +234,14 @@ for app in apps:
         served.append((app, version, library or "no library", iv, built, where, " ".join(flags)))
     if why:
         broken.append((app, iv, why))
+
+# Measured here and nowhere else: only the directories the cleanup section
+# proposes to delete, which is a handful rather than every venv on the server.
+reclaim = sum(app_size(r[0]) for r in leftover + orphan)
+if SIZES:
+    leftover = [r + (human(app_size(r[0])),) for r in leftover]
+    orphan = [r + (human(app_size(r[0])),) for r in orphan]
+cols = ["app", "version", "built"] + (["size"] if SIZES else [])
 
 # --------------------------------------------------------------------------- report
 
@@ -247,14 +263,14 @@ table(
 
 table(
     "LEFTOVER — served by app-launcher, this kernel is dead weight",
-    ["app", "version", "built", "size"],
+    cols,
     leftover,
     "  Still in the catalog, so the entry stays; only the venv goes.",
 )
 
 table(
     "ORPHAN — no catalog entry at all",
-    ["app", "version", "built", "size"],
+    cols,
     orphan,
     "  Nothing rebuilds these and nothing prunes them: app-manager only creates and\n"
     "  updates. They sit here until someone deletes them by hand.",
@@ -270,7 +286,7 @@ table(
 
 table(
     "IN BOTH TREES — a build copy and a live copy",
-    ["app", "build", "current"],
+    ["app", "in build tree", "in current tree"],
     split,
     "  update-app.sh moves the built venv from kernels/ to current-kernels/, so an\n"
     "  app in both usually means a build copy was stranded. Confirm which one\n"
@@ -302,10 +318,11 @@ logs = sorted(os.path.basename(p)[5:-4] for p in glob.glob(f"{LOGS}/venv-*.log")
               if os.path.basename(p)[5:-4] not in known)
 table(
     "OUTSIDE THE KERNEL TREES",
-    ["kind", "name", "size"],
-    [("clone", c, human(size_of(f"{APPS}/{c}"))) for c in clones]
-    + [("log", l, "-") for l in logs]
-    + ([("stranded", "venv-to-remove", human(size_of(f"{BUILD}/venv-to-remove")))]
+    ["kind", "name"] + (["size"] if SIZES else []),
+    [("clone", c) + ((human(size_of(f"{APPS}/{c}")),) if SIZES else ()) for c in clones]
+    + [("log", l) + (("-",) if SIZES else ()) for l in logs]
+    + ([("stranded", "venv-to-remove")
+        + ((human(size_of(f"{BUILD}/venv-to-remove")),) if SIZES else ())]
        if os.path.isdir(f"{BUILD}/venv-to-remove") else []),
     "  Clones are full git checkouts of retired apps; update-app.sh never removes one.\n"
     "  venv-to-remove is a whole venv stranded by a crash during the rotation.",
@@ -313,7 +330,8 @@ table(
 
 # --------------------------------------------------------------------------- cleanup
 
-print(f"\n\nCLEANUP  ({human(reclaim)} reclaimable from LEFTOVER + ORPHAN)")
+banner = f"  ({human(reclaim)} reclaimable)" if SIZES else "  (set SIZES = True to measure)"
+print(f"\n\nCLEANUP{banner}")
 if not (leftover or orphan or clones or logs):
     print("  nothing to remove")
 else:
