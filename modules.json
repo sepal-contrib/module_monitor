@@ -44,8 +44,8 @@
           "name": "sepal-gee-bundle",
           "github_url": "https://github.com/sepal-contrib/sepal-gee-bundle",
           "local_dir": "sepal-gee-bundle",
-          "on_prod": "pending",
-          "on_test": "pending",
+          "on_prod": "active",
+          "on_test": "active",
           "description": "Lightweight GEE-based SEPAL apps sharing a single Solara container. One Docker image, one process, per-app routes.",
           "apps": [
             {
@@ -122,8 +122,8 @@
             "skip": false,
             "ee_fork_version": "1.1.5rc0"
           },
-          "on_prod": "active",
-          "on_test": "active"
+          "on_prod": "missing",
+          "on_test": "missing"
         },
         {
           "name": "alos_mosaics",
@@ -149,8 +149,8 @@
             "skip": false,
             "ee_fork_version": "1.1.5rc0"
           },
-          "on_prod": "active",
-          "on_test": "active"
+          "on_prod": "missing",
+          "on_test": "missing"
         },
         {
           "name": "tmf_sepal",
@@ -176,8 +176,8 @@
             "skip": false,
             "ee_fork_version": "1.1.5rc0"
           },
-          "on_prod": "active",
-          "on_test": "active"
+          "on_prod": "missing",
+          "on_test": "missing"
         },
         {
           "name": "coverage_analysis",
@@ -203,8 +203,8 @@
             "skip": false,
             "ee_fork_version": "1.1.5rc0"
           },
-          "on_prod": "active",
-          "on_test": "active"
+          "on_prod": "missing",
+          "on_test": "missing"
         },
         {
           "name": "fcdm",
@@ -230,8 +230,8 @@
             "skip": false,
             "ee_fork_version": "1.1.5rc0"
           },
-          "on_prod": "active",
-          "on_test": "active"
+          "on_prod": "missing",
+          "on_test": "missing"
         },
         {
           "name": "basin-rivers",
@@ -257,8 +257,8 @@
             "skip": false,
             "ee_fork_version": "1.1.5rc0"
           },
-          "on_prod": "active",
-          "on_test": "active"
+          "on_prod": "missing",
+          "on_test": "missing"
         },
         {
           "name": "gee_source",
@@ -284,8 +284,8 @@
             "skip": false,
             "ee_fork_version": "1.1.5rc0"
           },
-          "on_prod": "active",
-          "on_test": "active"
+          "on_prod": "missing",
+          "on_test": "missing"
         }
       ]
     },
@@ -577,7 +577,7 @@
             "ee_fork_version": "1.1.5rc0"
           },
           "on_prod": "active",
-          "on_test": "missing"
+          "on_test": "active"
         },
         {
           "name": "sepal-leafmap",
@@ -600,8 +600,8 @@
             "skip": false,
             "ee_fork_version": "1.1.5rc0"
           },
-          "on_prod": "hidden",
-          "on_test": "active"
+          "on_prod": "missing",
+          "on_test": "missing"
         },
         {
           "name": "eSBAE_notebooks",
@@ -624,7 +624,7 @@
             "skip": true
           },
           "on_prod": "hidden",
-          "on_test": "active"
+          "on_test": "hidden"
         },
         {
           "name": "deforestation-alerts",
@@ -673,6 +673,84 @@
           },
           "on_prod": "active",
           "on_test": "active"
+        },
+        {
+          "name": "spatial-risk-module",
+          "github_url": "https://github.com/sepal-contrib/spatial-risk-module",
+          "conda_env": "yes",
+          "comments": "pysepal fork: SerafiniJose@spatial-risk",
+          "local_dir": "spatial-risk-module",
+          "on_prod": "active",
+          "on_test": "active"
+        }
+      ]
+    },
+    {
+      "name": "Shiny Modules",
+      "columns": [
+        "#",
+        "Module name",
+        "Status",
+        "conda env",
+        "comments"
+      ],
+      "modules": [
+        {
+          "name": "bfast-explorer",
+          "github_url": "https://github.com/sepal-contrib/bfast-explorer",
+          "conda_env": "no",
+          "comments": "R/shiny; fork of almeidaxan/bfast-explorer",
+          "local_dir": "bfast-explorer",
+          "on_prod": "active",
+          "on_test": "active"
+        },
+        {
+          "name": "bfastspatial",
+          "github_url": "https://github.com/sepal-contrib/bfastspatial",
+          "conda_env": "no",
+          "comments": "R/shiny",
+          "local_dir": "bfastspatial",
+          "on_prod": "active",
+          "on_test": "active"
+        }
+      ]
+    },
+    {
+      "name": "Environments (hidden in SEPAL)",
+      "columns": [
+        "#",
+        "Module name",
+        "Status",
+        "conda env",
+        "comments"
+      ],
+      "modules": [
+        {
+          "name": "pyeo",
+          "github_url": "https://github.com/clcr/pyeo",
+          "conda_env": "no",
+          "comments": "environment.yml, not sepal_environment.yml",
+          "local_dir": "pyeo",
+          "on_prod": "hidden",
+          "on_test": "hidden"
+        },
+        {
+          "name": "alerts-viewer",
+          "github_url": "https://github.com/dfguerrerom/alerts-viewer",
+          "conda_env": "yes",
+          "comments": "prod only",
+          "local_dir": "alerts-viewer",
+          "on_prod": "hidden",
+          "on_test": "missing"
+        },
+        {
+          "name": "sepal-sam",
+          "github_url": "https://github.com/dfguerrerom/sepal-sam",
+          "conda_env": "yes",
+          "comments": "",
+          "local_dir": "sepal-sam",
+          "on_prod": "hidden",
+          "on_test": "hidden"
         }
       ]
     },

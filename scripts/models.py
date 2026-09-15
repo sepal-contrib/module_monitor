@@ -1,4 +1,8 @@
-"""Pydantic models for the SEPAL /api/apps/list endpoint."""
+"""Pydantic models for a sepal-apps-catalog file (apps.{dev,test,prod}.json).
+
+The same shape is served by SEPAL's /api/apps/list, which app-manager renders
+from these files at runtime.
+"""
 
 from __future__ import annotations
 
@@ -13,24 +17,18 @@ class AppEndpoint(str, Enum):
     rstudio = "rstudio"
 
 
-class AppTag(str, Enum):
-    CLASSIFICATION = "CLASSIFICATION"
-    DISASTER = "DISASTER"
-    PLANET = "PLANET"
-    RESTORATION = "RESTORATION"
-    SMFM = "SMFM"
-    TIME_SERIES = "TIME_SERIES"
-    TOOLS = "TOOLS"
-
-
 class SepalApp(BaseModel):
-    """A single app entry from the SEPAL server API."""
+    """A single app entry in the catalog."""
 
     id: str
     label: str
     path: str
     endpoint: AppEndpoint | None = None
-    tags: list[AppTag] = []
+    # Free-form on purpose: the catalog owns the tag vocabulary and adds to it
+    # (FOREST, INSTANT, LAND_COVER and SAR all post-date this model). A closed
+    # enum here would reject a valid catalog. check_server_apps.py reports tags
+    # an app uses that the catalog itself never declares.
+    tags: list[str] = []
     pinned: bool = False
     hidden: bool = False
     single: bool = False
@@ -48,7 +46,7 @@ class SepalApp(BaseModel):
 
 
 class SepalAppList(BaseModel):
-    """Response from /api/apps/list."""
+    """A whole catalog file."""
 
     apps: list[SepalApp]
 
