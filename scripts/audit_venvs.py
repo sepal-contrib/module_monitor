@@ -213,9 +213,17 @@ for app in apps:
     iv, why = ipyvuetify_of(venv)
     built = built_date(venv)
 
-    kernel_json = f"{LIVE}/venv-{app}/kernel.json"
-    has_spec = os.path.exists(kernel_json)
-    if carto_key_in(kernel_json):
+    # Deployments disagree on where the kernelspec goes. The current update-app.sh
+    # writes it to current-kernels/ while building the venv in kernels/; the image
+    # running on prod has no current-kernels/ at all and keeps kernel.json beside
+    # the venv. Accept either rather than reporting every app as unregistered.
+    kernel_json = next(
+        (p for p in (os.path.join(os.path.dirname(venv), "kernel.json"),
+                     f"{LIVE}/venv-{app}/kernel.json",
+                     f"{BUILD}/venv-{app}/kernel.json") if os.path.exists(p)),
+        None)
+    has_spec = kernel_json is not None
+    if has_spec and carto_key_in(kernel_json):
         patched.append((app, built, "wiped on next rebuild"))
     if has_build and has_live:
         split.append((app, "yes", "yes"))
@@ -247,10 +255,12 @@ cols = ["app", "version", "built"] + (["size"] if SIZES else [])
 
 print(f"host:    {socket.gethostname()}")
 print(f"catalog: {CATALOG} @ {BRANCH}  ({len(catalog)} apps with a repository)")
-print(f"apps:    {len(apps)} venv dirs across both kernel trees")
+print(f"apps:    {len(apps)} venv dirs")
 for label, root in (("build  ", BUILD), ("current", LIVE)):
-    n = len(glob.glob(f"{root}/venv-*"))
-    print(f"  {label} {root}  ({n} entries)")
+    if os.path.isdir(root):
+        print(f"  {label} {root}  ({len(glob.glob(f'{root}/venv-*'))} entries)")
+    else:
+        print(f"  {label} {root}  (absent on this deployment)")
 
 table(
     "SERVED — these apps run from this venv",
@@ -338,7 +348,8 @@ else:
     print("  Review first. Each app needs BOTH trees removed: the venv and the")
     print("  kernelspec that launches it are not in the same directory.\n")
     for app, *_ in leftover + orphan:
-        print(f"  rm -rf {BUILD}/venv-{app} {LIVE}/venv-{app}")
+        paths = [d for d in (f"{BUILD}/venv-{app}", f"{LIVE}/venv-{app}") if os.path.isdir(d)]
+        print(f"  rm -rf {' '.join(paths)}")
     for c in clones:
         print(f"  rm -rf {APPS}/{c}")
     for l in logs:
