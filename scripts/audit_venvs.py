@@ -95,7 +95,10 @@ def version_of(venv):
     spatial-risk-module installs pysepal from a git fork and sepal-gee-bundle
     vendors its own; both report '?' if you only ever read __version__.
     """
-    for pkg in ("sepal_ui", "pysepal"):
+    # pysepal first: 3.8.x installs a sepal_ui compatibility shim beside itself, and
+    # the shim carries no __version__ and no dist-info. Checking sepal_ui first finds
+    # the shim and reports "?" for an app that is plainly on pysepal.
+    for pkg in ("pysepal", "sepal_ui"):
         hits = glob.glob(f"{venv}/lib/python3.*/site-packages/{pkg}/__init__.py")
         if not hits:
             continue
@@ -177,8 +180,21 @@ def table(title, columns, rows, blurb=None):
 
 # --------------------------------------------------------------------------- catalog
 
+# The sandbox hostname is a random name (lush-boulder, e941b2a70eed), so it says
+# nothing about the deployment. SEPAL_HOST is set in /etc/environment and every
+# process inherits it. Refuse to guess: auditing test against the prod catalog
+# misreports which apps are orphaned, and does it silently.
+SEPAL_HOST = os.getenv("SEPAL_HOST", "")
 if CATALOG is None:
-    CATALOG = "apps.test.json" if "test" in socket.gethostname().lower() else "apps.prod.json"
+    if "test" in SEPAL_HOST:
+        CATALOG = "apps.test.json"
+    elif SEPAL_HOST.endswith("sepal.io"):
+        CATALOG = "apps.prod.json"
+    else:
+        raise SystemExit(
+            f"cannot tell which deployment this is (SEPAL_HOST={SEPAL_HOST!r}).\n"
+            f"Set CATALOG at the top of this script to apps.test.json or apps.prod.json."
+        )
 
 url = f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/{CATALOG}"
 raw = json.loads(urllib.request.urlopen(url, timeout=30).read())
@@ -253,7 +269,7 @@ cols = ["app", "version", "built"] + (["size"] if SIZES else [])
 
 # --------------------------------------------------------------------------- report
 
-print(f"host:    {socket.gethostname()}")
+print(f"host:    {socket.gethostname()}  (SEPAL_HOST={SEPAL_HOST or 'unset'})")
 print(f"catalog: {CATALOG} @ {BRANCH}  ({len(catalog)} apps with a repository)")
 print(f"apps:    {len(apps)} venv dirs")
 for label, root in (("build  ", BUILD), ("current", LIVE)):
