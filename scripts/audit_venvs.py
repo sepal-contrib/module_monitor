@@ -272,11 +272,13 @@ cols = ["app", "version", "built"] + (["size"] if SIZES else [])
 print(f"host:    {socket.gethostname()}  (SEPAL_HOST={SEPAL_HOST or 'unset'})")
 print(f"catalog: {CATALOG} @ {BRANCH}  ({len(catalog)} apps with a repository)")
 print(f"apps:    {len(apps)} venv dirs")
+print("  A sandbox mounts only the live tree, and mounts it as kernels/ -- the same")
+print("  files the host calls current-kernels/. The build tree is not visible here.")
 for label, root in (("build  ", BUILD), ("current", LIVE)):
     if os.path.isdir(root):
         print(f"  {label} {root}  ({len(glob.glob(f'{root}/venv-*'))} entries)")
     else:
-        print(f"  {label} {root}  (absent on this deployment)")
+        print(f"  {label} {root}  (not mounted here)")
 
 table(
     "SERVED — these apps run from this venv",
@@ -357,16 +359,21 @@ table(
 # --------------------------------------------------------------------------- cleanup
 
 banner = f"  ({human(reclaim)} reclaimable)" if SIZES else "  (set SIZES = True to measure)"
-print(f"\n\nCLEANUP{banner}")
+print(f"\n\nCLEANUP  ({len(leftover) + len(orphan)} apps)")
 if not (leftover or orphan or clones or logs):
     print("  nothing to remove")
 else:
-    print("  Review first. Each app needs BOTH trees removed: the venv and the")
-    print("  kernelspec that launches it are not in the same directory.\n")
-    for app, *_ in leftover + orphan:
-        paths = [d for d in (f"{BUILD}/venv-{app}", f"{LIVE}/venv-{app}") if os.path.isdir(d)]
-        print(f"  rm -rf {' '.join(paths)}")
+    print("  Delete these on the HOST, not from a sandbox: the build tree is not")
+    print("  mounted here, and the venv directories are owned by root.\n")
+    print("  Find the host jupyter directory:")
+    print("    docker inspect app-manager --format "
+          "'{{range .Mounts}}{{.Source}} -> {{.Destination}}{{\"\\n\"}}{{end}}' | grep -i jupyter\n")
+    print("  Then, from that directory (both trees, every app):\n")
+    print("    APPS=\"" + " ".join(a for a, *_ in leftover + orphan) + "\"")
+    print("    for a in $APPS; do sudo rm -rf \"kernels/venv-$a\" \"current-kernels/venv-$a\"; done\n")
+    print("  Expect it to take tens of minutes: a conda venv is ~10^5 small files on")
+    print("  network storage. Interrupting is safe -- rm -rf is idempotent.")
     for c in clones:
-        print(f"  rm -rf {APPS}/{c}")
+        print(f"\n  rm -rf {APPS}/{c}")
     for l in logs:
         print(f"  rm -f  {LOGS}/venv-{l}.log")
